@@ -1,0 +1,30 @@
+{
+  "name": "House 1",
+  "floors": [
+    {
+      "name": "First Floor",
+      "rooms": [
+        {
+          "name": "Living Room",
+          "devices": [
+            {"type": "Heater", "name": "Xiaomi heater", "electricityUsage": 5},
+            {"type": "Heater", "name": "Xiaomi heater", "electricityUsage": 5}
+          ],
+          "sensors": [
+            {"type": "temperature", "name": "Temperature Sensor 1"}
+          ]
+        }
+      ]
+    }
+  ],
+  "inhabitants": [
+    {"type": "Adult", "name": "John", "age": 30},
+    {"type": "Child", "name": "Emily", "age": 8},
+    {"type": "Animal", "name": "Buddy", "species": "Dog"},
+    {"type": "Baby", "name": "Lox", "age": 1}
+  ],
+  "equipment": [
+    {"name": "Bicycle 1", "type": "Bicycle"}
+  ]
+}
+
