@@ -1,6 +1,9 @@
 package smarthome.entities.devices;
 
-public class Device {
+import smarthome.HouseComponent;
+import smarthome.Visitor;
+
+public class Device implements HouseComponent {
     private String name;
     private double electricityUsage;
 
@@ -16,5 +19,10 @@ public class Device {
 
     public double getElectricityUsage() {
         return electricityUsage;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitDevice(this);
     }
 }

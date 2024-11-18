@@ -1,9 +1,12 @@
 package smarthome.entities;
 
+import smarthome.HouseComponent;
+import smarthome.Visitor;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Floor {
+public class Floor implements HouseComponent {
     private String name;
     private List<Room> rooms = new ArrayList<>();
 
@@ -22,5 +25,10 @@ public class Floor {
 
     public void addRoom(Room room) {
         rooms.add(room);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitFloor(this);
     }
 }
