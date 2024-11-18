@@ -31,8 +31,8 @@ public class Start {
             HouseConfig houseConfig = mapper.readValue(inputStream, HouseConfig.class);
             House house = buildHouse(houseConfig);
 
-            System.out.println("done");
-
+            Visitor report = new ConsumptionReport();
+            house.accept(report);
 
         } catch (IOException e) {
             e.printStackTrace();
