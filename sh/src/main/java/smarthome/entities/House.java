@@ -4,13 +4,15 @@ import smarthome.HouseComponent;
 import smarthome.Visitor;
 import smarthome.entities.equipment.Equipment;
 import smarthome.entities.inhabitants.Inhabitant;
+import smarthome.iterators.HouseComponentIterator;
+import smarthome.iterators.HouseIterator;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class House implements HouseComponent {
     private String name;
-    private List<Floor> floors = new ArrayList<>();
+    private List<HouseComponent> floors = new ArrayList<>();
     private List<Inhabitant> inhabitants = new ArrayList<>();
     private List<Equipment> equipment = new ArrayList<>();
 
@@ -42,5 +44,15 @@ public class House implements HouseComponent {
     @Override
     public void accept(Visitor visitor) {
         visitor.visitHouse(this);
+        HouseComponentIterator iterator = iterator();
+        while (iterator.hasNext()) {
+            HouseComponent floor = iterator.next();
+            floor.accept(visitor);
+        }
+    }
+
+    @Override
+    public HouseComponentIterator iterator() {
+        return new HouseIterator(floors);
     }
 }

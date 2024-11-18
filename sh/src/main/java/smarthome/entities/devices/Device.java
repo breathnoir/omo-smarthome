@@ -2,6 +2,8 @@ package smarthome.entities.devices;
 
 import smarthome.HouseComponent;
 import smarthome.Visitor;
+import smarthome.iterators.HouseComponentIterator;
+import smarthome.iterators.NullIterator;
 
 public class Device implements HouseComponent {
     private String name;
@@ -24,5 +26,10 @@ public class Device implements HouseComponent {
     @Override
     public void accept(Visitor visitor) {
         visitor.visitDevice(this);
+    }
+
+    @Override
+    public HouseComponentIterator iterator() {
+        return new NullIterator();
     }
 }
