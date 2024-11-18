@@ -10,4 +10,11 @@ public class Device {
 
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getElectricityUsage() {
+        return electricityUsage;
+    }
 }
