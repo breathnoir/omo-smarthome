@@ -10,5 +10,7 @@ public class AirConditioner extends Device implements Observer{
     @Override
     public void update() {
         double temperature = getRoom().getTemperature();
+        if (temperature > 25.0) enable();
+        else disable();
     }
 }

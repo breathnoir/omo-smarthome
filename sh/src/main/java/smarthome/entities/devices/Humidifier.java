@@ -10,5 +10,7 @@ public class Humidifier extends Device implements Observer{
     @Override
     public void update() {
         double humidity = getRoom().getHumidity();
+        if (humidity > 60 || humidity < 30) enable();
+        else disable();
     }
 }

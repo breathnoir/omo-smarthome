@@ -10,5 +10,7 @@ public class Blinds extends Device implements Observer{
     @Override
     public void update() {
         double windSpeed = getRoom().getWindSpeed();
+        if (windSpeed > 30.0) enable();
+        else disable();
     }
 }
