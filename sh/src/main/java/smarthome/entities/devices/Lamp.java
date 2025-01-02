@@ -9,6 +9,10 @@ public class Lamp extends Device implements Observer{
 
     @Override
     public void update() {
-
+        if (getRoom().isMotionDetected()) {
+            if (getRoom().getLightning() < 650) enable();
+            getRoom().setMotionDetected(false);
+        }
+        if (getRoom().getLightning() >= 650 ) disable();
     }
 }
