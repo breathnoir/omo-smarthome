@@ -2,20 +2,26 @@ package smarthome;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import smarthome.config.*;
+import smarthome.entities.Floor;
 import smarthome.entities.House;
+import smarthome.entities.Room;
 import smarthome.entities.builders.FloorBuilder;
 import smarthome.entities.builders.HouseBuilder;
 import smarthome.entities.builders.RoomBuilder;
+import smarthome.entities.devices.Device;
 import smarthome.entities.equipment.Equipment;
 import smarthome.entities.equipment.EquipmentFactory;
 import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.entities.inhabitants.InhabitantFactory;
 import smarthome.events.BrokenDeviceEvent;
+import smarthome.events.Event;
 import smarthome.events.EventBus;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Start {
     public static void main(String[] args) {
@@ -35,11 +41,38 @@ public class Start {
 
             Inhabitant chain = ChainBuilder.buildChain(house.getInhabitants());
             EventBus.getInstance().registerChain(BrokenDeviceEvent.class, chain);
+            Queue<Event> eventQueue = new LinkedList<>();
 
-//            Floor floor = (Floor) house.getFloors().get(0);
-//            Room room = (Room) floor.getRooms().get(0);
-//            Device device = (Device) room.getDevices().get(1);
-//            device.breakDevice();
+            Floor floor = (Floor) house.getFloors().get(0);
+            Room room = (Room) floor.getRooms().get(0);
+            Device device = (Device) room.getDevices().get(1);
+            Device device2 = (Device) room.getDevices().get(0);
+            Device device3 = (Device) room.getDevices().get(2);
+            Inhabitant inhabitant = house.getInhabitants().get(0);
+            Inhabitant inhabitant2 = house.getInhabitants().get(1);
+
+            for (int tick = 0; tick < 10; tick++) {
+                System.out.println("Tick " + tick);
+
+                // Generate random events
+                if (tick == 1) {
+                    eventQueue.add(device.breakDevice());
+                }
+                if (tick == 2) {
+                    eventQueue.add(device2.breakDevice());
+                }
+                if (tick == 3) {
+                    eventQueue.add(device3.breakDevice());
+                }
+                inhabitant.progressTask();
+                inhabitant2.progressTask();
+
+                // Process events
+//                while (!eventQueue.isEmpty()) {
+//                    Event event = eventQueue.poll();
+//
+//                }
+            }
 
             Visitor report = new ConsumptionReport();
             house.acceptVisitor(report);

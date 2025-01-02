@@ -101,9 +101,12 @@ public class Device implements HouseComponent {
         return new NullIterator();
     }
 
-    public void breakDevice() {
+    public BrokenDeviceEvent breakDevice() {
+        state = brokenState;
         System.out.println(name + " is broken.");
-        eventBus.publishEvent(new BrokenDeviceEvent(this));
+        BrokenDeviceEvent event = new BrokenDeviceEvent(this);
+        eventBus.publishEvent(event);
+        return event;
     }
 
 }
