@@ -26,12 +26,12 @@ public class Room implements HouseComponent {
         this.name = roomName;
     }
 
-    public void accept(Visitor visitor) {
+    public void acceptVisitor(Visitor visitor) {
         visitor.visitRoom(this);
         HouseComponentIterator iterator = iterator();
         while (iterator.hasNext()) {
             HouseComponent device = iterator.next();
-            device.accept(visitor);
+            device.acceptVisitor(visitor);
         }
     }
 

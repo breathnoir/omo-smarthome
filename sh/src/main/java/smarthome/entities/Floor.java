@@ -24,18 +24,21 @@ public class Floor implements HouseComponent {
         this.name = name;
     }
 
+    public List<HouseComponent> getRooms() {
+        return rooms;
+    }
 
     public void addRoom(Room room) {
         rooms.add(room);
     }
 
     @Override
-    public void accept(Visitor visitor) {
+    public void acceptVisitor(Visitor visitor) {
         visitor.visitFloor(this);
         HouseComponentIterator iterator = iterator();
         while (iterator.hasNext()) {
             HouseComponent room = iterator.next();
-            room.accept(visitor);
+            room.acceptVisitor(visitor);
         }
     }
 

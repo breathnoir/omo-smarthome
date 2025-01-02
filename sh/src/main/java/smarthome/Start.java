@@ -10,6 +10,8 @@ import smarthome.entities.equipment.Equipment;
 import smarthome.entities.equipment.EquipmentFactory;
 import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.entities.inhabitants.InhabitantFactory;
+import smarthome.events.BrokenDeviceEvent;
+import smarthome.events.EventBus;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -31,8 +33,16 @@ public class Start {
             HouseConfig houseConfig = mapper.readValue(inputStream, HouseConfig.class);
             House house = buildHouse(houseConfig);
 
+            Inhabitant chain = ChainBuilder.buildChain(house.getInhabitants());
+            EventBus.getInstance().registerChain(BrokenDeviceEvent.class, chain);
+
+//            Floor floor = (Floor) house.getFloors().get(0);
+//            Room room = (Room) floor.getRooms().get(0);
+//            Device device = (Device) room.getDevices().get(1);
+//            device.breakDevice();
+
             Visitor report = new ConsumptionReport();
-            house.accept(report);
+            house.acceptVisitor(report);
 
         } catch (IOException e) {
             e.printStackTrace();

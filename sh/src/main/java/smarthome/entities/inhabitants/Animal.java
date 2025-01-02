@@ -1,6 +1,9 @@
 package smarthome.entities.inhabitants;
 
+import smarthome.events.Event;
+
 public class Animal extends Inhabitant {
+
     private String species;
 
     public Animal(String name, int age, String species) {
@@ -8,4 +11,13 @@ public class Animal extends Inhabitant {
         this.species = species;
     }
 
+    @Override
+    protected boolean canHandle(Event event) {
+        return false;
+    }
+
+    @Override
+    protected void processEvent(Event event) {
+
+    }
 }

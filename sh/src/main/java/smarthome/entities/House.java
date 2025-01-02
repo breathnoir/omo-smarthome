@@ -41,13 +41,22 @@ public class House implements HouseComponent {
         equipment.add(equipmentPiece);
     }
 
+    public List<Inhabitant> getInhabitants() {
+        return inhabitants;
+    }
+
+    public List<HouseComponent> getFloors() {
+        return floors;
+    }
+
+
     @Override
-    public void accept(Visitor visitor) {
+    public void acceptVisitor(Visitor visitor) {
         visitor.visitHouse(this);
         HouseComponentIterator iterator = iterator();
         while (iterator.hasNext()) {
             HouseComponent floor = iterator.next();
-            floor.accept(visitor);
+            floor.acceptVisitor(visitor);
         }
     }
 
