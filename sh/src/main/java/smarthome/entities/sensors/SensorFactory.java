@@ -1,18 +1,20 @@
 package smarthome.entities.sensors;
 
+import smarthome.entities.Room;
+
 public class SensorFactory {
-    public  static Sensor createSensor(String type, String name) {
+    public  static Sensor createSensor(String type, Room room, String name) {
         switch (type) {
             case "Temperature":
-                return new TemperatureSensor(name);
+                return new TemperatureSensor(room, name);
             case "Humidity":
-                return new HumiditySensor(name);
+                return new HumiditySensor(room, name);
             case "Light":
-                return new LightSensor(name);
+                return new LightSensor(room, name);
             case "Motion":
-                return new MotionSensor(name);
+                return new MotionSensor(room, name);
             case "Wind":
-                return new WindSensor(name);
+                return new WindSensor(room, name);
             default:
                 return null;
         }

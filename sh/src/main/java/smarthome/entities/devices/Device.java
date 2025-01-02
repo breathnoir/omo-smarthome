@@ -9,7 +9,8 @@ import smarthome.Visitor;
 
 public class Device implements HouseComponent {
     private String name;
-    private double electricityUsage;
+    private final double electricityUsage;
+    private double electricityUsed = 0;
     private Room room;
 
     public Device(Room room, String name, double electricityUsage) {
@@ -35,8 +36,12 @@ public class Device implements HouseComponent {
         return electricityUsage;
     }
 
-    public void setElectricityUsage(double electricityUsage) {
-        this.electricityUsage = electricityUsage;
+    public double getElectricityUsed() {
+        return electricityUsed;
+    }
+
+    public void useElectricity(){
+        electricityUsed += electricityUsage;
     }
 
     @Override

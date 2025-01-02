@@ -35,6 +35,20 @@ public class Room implements HouseComponent {
         }
     }
 
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    private void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update();
+        }
+    }
+
     @Override
     public HouseComponentIterator iterator() {
         return new RoomIterator(devices);
@@ -94,5 +108,13 @@ public class Room implements HouseComponent {
 
     public void setMotionDetected(boolean motionDetected) {
         this.motionDetected = motionDetected;
+    }
+
+    public List<HouseComponent> getDevices() {
+        return devices;
+    }
+
+    public void setObservers(List<Observer> observers) {
+        this.observers = observers;
     }
 }

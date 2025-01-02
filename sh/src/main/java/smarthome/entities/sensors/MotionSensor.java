@@ -1,7 +1,10 @@
 package smarthome.entities.sensors;
 
+import smarthome.entities.Room;
+
 public class MotionSensor extends Sensor {
-    public MotionSensor(String name) {
-        super(name);
+
+    public MotionSensor(Room room, String name) {
+        super(room, name);
     }
 }
