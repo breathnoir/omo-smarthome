@@ -2,8 +2,8 @@ package smarthome.entities.devices;
 
 import smarthome.entities.Room;
 
-public class Heater extends Device implements Observer{
-    public Heater(Room room, String name, double electricityUsage) {
+public class AirConditioner extends Device implements Observer{
+    public AirConditioner(Room room, String name, double electricityUsage) {
         super(room, name, electricityUsage);
     }
 

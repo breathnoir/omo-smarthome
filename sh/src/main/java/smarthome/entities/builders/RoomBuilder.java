@@ -14,7 +14,7 @@ public class RoomBuilder {
     }
 
     public void addDevice(String type, String name, double electricityUsage) {
-        Device device = DeviceFactory.createDevice(type, name, electricityUsage);
+        Device device = DeviceFactory.createDevice(room, type, name, electricityUsage);
         room.addDevice(device);
     }
 
