@@ -105,7 +105,7 @@ public class Device implements HouseComponent {
         state = brokenState;
         System.out.println(name + " is broken.");
         BrokenDeviceEvent event = new BrokenDeviceEvent(this);
-        eventBus.publishEvent(event);
+//        eventBus.publishEvent(event);
         return event;
     }
 

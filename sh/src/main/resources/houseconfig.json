@@ -20,7 +20,7 @@
   ],
   "inhabitants": [
     {"type": "Adult", "name": "John", "age": 30},
-    {"type": "Adult", "name": "James", "age": 30},
+    {"type": "Adult", "name": "Lucy", "age": 30},
     {"type": "Child", "name": "Emily", "age": 8},
     {"type": "Animal", "name": "Buddy", "species": "Dog"},
     {"type": "Baby", "name": "Lox", "age": 1}

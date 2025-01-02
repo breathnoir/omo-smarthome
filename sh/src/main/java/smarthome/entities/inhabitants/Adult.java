@@ -3,6 +3,7 @@ package smarthome.entities.inhabitants;
 import smarthome.events.BrokenDeviceEvent;
 import smarthome.events.DistressedPetEvent;
 import smarthome.events.Event;
+import smarthome.task.ComfortPetTask;
 import smarthome.task.FindManualTask;
 import smarthome.task.FixDeviceTask;
 
@@ -20,12 +21,13 @@ public class Adult extends Inhabitant {
     @Override
     public void processEvent(Event event) {
         if (event instanceof BrokenDeviceEvent brokenDeviceEvent) {
-//            System.out.println(name + " is attending to fix device: " + brokenDeviceEvent.getDevice().getName());
+            System.out.println(name + " is attending to fix device: " + brokenDeviceEvent.getDevice().getName());
             assignTask(new FindManualTask(brokenDeviceEvent.getDevice(), this));
             assignTask(new FixDeviceTask(brokenDeviceEvent.getDevice(), this));
 
         } else if (event instanceof DistressedPetEvent distressedPetEvent) {
             System.out.println(name + " is attending to check " + distressedPetEvent.getAnimal().name);
+            assignTask(new ComfortPetTask(distressedPetEvent.getAnimal(), 1,this));
         }
     }
 

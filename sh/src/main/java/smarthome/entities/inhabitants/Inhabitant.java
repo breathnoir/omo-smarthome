@@ -1,5 +1,6 @@
 package smarthome.entities.inhabitants;
 
+import smarthome.Simulation;
 import smarthome.entities.Floor;
 import smarthome.entities.Room;
 import smarthome.events.Event;
@@ -27,11 +28,11 @@ public abstract class Inhabitant {
     public void handleEvent(Event event) {
         if (canHandle(event) && !isBusy()) {
             processEvent(event);
+            Simulation.getInstance().getEventQueue().remove(event);
         } else if (next != null) {
             next.handleEvent(event);
         } else {
-            System.out.println("No one could handle the event: " + event.getClass().getSimpleName());
-
+            System.out.println("No one could handle the event: " + event.getClass().getSimpleName() + ". Event remained in the queue.");
         }
     }
 
@@ -51,7 +52,7 @@ public abstract class Inhabitant {
             Task task = taskQueue.peek();
             if (task.progress()) {
                 taskQueue.poll();
-            }// Remove completed task
+            }
         }
     }
 

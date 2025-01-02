@@ -1,5 +1,6 @@
 package smarthome.events;
 
+import smarthome.Simulation;
 import smarthome.entities.inhabitants.Inhabitant;
 
 import java.util.HashMap;
