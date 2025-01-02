@@ -2,10 +2,9 @@ package smarthome.entities.sensors;
 
 import smarthome.entities.Room;
 
-public class TemperatureSensor extends Sensor {
+public class HumiditySensor extends Sensor{
 
-
-    public TemperatureSensor(Room room, String name) {
+    public HumiditySensor(Room room, String name) {
         super(room, name);
     }
 }

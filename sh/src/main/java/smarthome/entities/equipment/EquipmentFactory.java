@@ -5,6 +5,8 @@ public class EquipmentFactory {
         switch (type) {
             case "Bicycle":
                 return new Bicycle(name);
+            case "Skis":
+                return new Skis(name);
             default:
                 return null;
         }

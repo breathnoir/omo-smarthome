@@ -25,6 +25,6 @@ public class ConsumptionReport implements Visitor {
 
     @Override
     public void visitDevice(Device device) {
-        System.out.println("      Device: " + device.getName() + " - Usage: " + device.getElectricityUsage() + " kWh");
+        System.out.println("      Device: " + device.getName() + " - Usage: " + device.getElectricityUsed() + " kWh");
     }
 }
