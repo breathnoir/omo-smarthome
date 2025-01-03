@@ -3,6 +3,8 @@ package smarthome.entities.devices;
 
 import smarthome.HouseComponent;
 import smarthome.entities.Room;
+import smarthome.events.BrokenDeviceEvent;
+import smarthome.events.EventBus;
 import smarthome.iterators.HouseComponentIterator;
 import smarthome.iterators.NullIterator;
 import smarthome.Visitor;
@@ -20,8 +22,9 @@ public class Device implements HouseComponent {
     private DeviceState onState;
     private DeviceState offState;
     private DeviceState brokenState;
-
     private DeviceState state;
+
+    private EventBus eventBus = EventBus.getInstance();
 
     public Device(Room room, String name, double electricityUsage) {
         this.room = room;
@@ -89,7 +92,7 @@ public class Device implements HouseComponent {
     }
 
     @Override
-    public void accept(Visitor visitor) {
+    public void acceptVisitor(Visitor visitor) {
         visitor.visitDevice(this);
     }
 
@@ -97,4 +100,9 @@ public class Device implements HouseComponent {
     public HouseComponentIterator iterator() {
         return new NullIterator();
     }
+
+    public BrokenDeviceEvent breakDevice() {
+        return state.breakDevice();
+    }
+
 }

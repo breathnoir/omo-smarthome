@@ -7,4 +7,9 @@ public class MotionSensor extends Sensor {
     public MotionSensor(Room room, String name) {
         super(room, name);
     }
+
+    @Override
+    public void updateStat() {
+
+    }
 }

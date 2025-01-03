@@ -9,6 +9,7 @@ import smarthome.iterators.HouseIterator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class House implements HouseComponent {
     private String name;
@@ -41,13 +42,26 @@ public class House implements HouseComponent {
         equipment.add(equipmentPiece);
     }
 
+    public List<Inhabitant> getInhabitants() {
+        return inhabitants;
+    }
+
+    public List<HouseComponent> getFloors() {
+        return floors;
+    }
+
+    public List<Floor> getAllFloors() {
+        return floors.stream().map(Floor.class::cast).collect(Collectors.toList());
+    }
+
+
     @Override
-    public void accept(Visitor visitor) {
+    public void acceptVisitor(Visitor visitor) {
         visitor.visitHouse(this);
         HouseComponentIterator iterator = iterator();
         while (iterator.hasNext()) {
             HouseComponent floor = iterator.next();
-            floor.accept(visitor);
+            floor.acceptVisitor(visitor);
         }
     }
 

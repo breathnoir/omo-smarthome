@@ -3,6 +3,6 @@ package smarthome;
 import smarthome.iterators.HouseComponentIterator;
 
 public interface HouseComponent {
-    void accept(Visitor visitor);
+    void acceptVisitor(Visitor visitor);
     HouseComponentIterator iterator();
 }

@@ -31,8 +31,9 @@ public class Start {
             HouseConfig houseConfig = mapper.readValue(inputStream, HouseConfig.class);
             House house = buildHouse(houseConfig);
 
-            Visitor report = new ConsumptionReport();
-            house.accept(report);
+            Simulation simulation = Simulation.getInstance();
+            simulation.setHouse(house);
+            simulation.run();
 
         } catch (IOException e) {
             e.printStackTrace();

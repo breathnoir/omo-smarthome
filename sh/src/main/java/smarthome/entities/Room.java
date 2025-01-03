@@ -10,28 +10,29 @@ import smarthome.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Room implements HouseComponent {
     private String name;
     private List<HouseComponent> devices = new ArrayList<>();
     private List<Observer> observers = new ArrayList<>();
     private List<Sensor> sensors = new ArrayList<>();
-    private double temperature;
-    private double humidity;
-    private double windSpeed;
-    private double lightning;
-    private boolean motionDetected;
+    private double temperature = 22.0;
+    private double humidity = 50.0;
+    private double windSpeed = 0;
+    private double lightning = 700;
+    private boolean motionDetected = false;
 
     public Room(String roomName) {
         this.name = roomName;
     }
 
-    public void accept(Visitor visitor) {
+    public void acceptVisitor(Visitor visitor) {
         visitor.visitRoom(this);
         HouseComponentIterator iterator = iterator();
         while (iterator.hasNext()) {
             HouseComponent device = iterator.next();
-            device.accept(visitor);
+            device.acceptVisitor(visitor);
         }
     }
 
@@ -43,7 +44,7 @@ public class Room implements HouseComponent {
         observers.remove(observer);
     }
 
-    private void notifyObservers() {
+    public void notifyObservers() {
         for (Observer observer : observers) {
             observer.update();
         }
@@ -114,7 +115,15 @@ public class Room implements HouseComponent {
         return devices;
     }
 
+    public List<Device> getAllDevices() {
+        return devices.stream().map(Device.class::cast).collect(Collectors.toList());
+    }
+
     public void setObservers(List<Observer> observers) {
         this.observers = observers;
+    }
+
+    public List<Sensor> getSensors() {
+        return sensors;
     }
 }
