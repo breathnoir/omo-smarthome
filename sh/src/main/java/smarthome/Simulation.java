@@ -40,6 +40,9 @@ public final class Simulation {
 
         registerChains();
 
+        List<Device> devices = getDevices();
+        List<Inhabitant> inhabitants = getInhabitants();
+
         for (int tick = 0; tick < TICS; tick++) {
             System.out.println("Tick " + tick);
 
@@ -53,22 +56,24 @@ public final class Simulation {
                 EventBus.getInstance().publishEvent(event); // Safely process events
             }
 
-//            generateDeviceBreakdown();
+            generateDeviceBreakdown(devices);
 
-//            generateCryingBabies();
+            generateCryingBabies(inhabitants);
 
-//            generatePetEvents();
+            generatePetEvents(inhabitants);
 
-            for (Inhabitant inhabitant : getInhabitants()){
+            for (Inhabitant inhabitant : inhabitants){
                 if (!inhabitant.isBusy()) inhabitant.useAvailableObject(getUsableObjects());
             }
 
-            getInhabitants().forEach(Inhabitant::progressTask);
+            inhabitants.forEach(Inhabitant::progressTask);
 
-//            getRooms().forEach(room -> {
-//                this.updateRoomStats(room);
-//                room.notifyObservers();
-//            });
+            getRooms().forEach(room -> {
+                updateRoomStats(room);
+                room.notifyObservers();
+            });
+
+            devices.forEach(Device::useElectricity);
 
         }
 
@@ -121,8 +126,7 @@ public final class Simulation {
         EventBus.getInstance().registerChain(CryingBabyEvent.class, chain);
     }
 
-    public void generateDeviceBreakdown(){
-        List<Device> devices = getDevices();
+    public void generateDeviceBreakdown(List<Device> devices){
         for (Device device : devices) {
             if (random.nextDouble() < 0.1) {
                 Event newEvent = device.breakDevice();
@@ -134,13 +138,12 @@ public final class Simulation {
         }
     }
 
-    public void generateCryingBabies() {
-        List<Inhabitant> inhabitants = getInhabitants();
-        for (Inhabitant baby: inhabitants) {
-            if (baby instanceof Baby) {
-                if (!((Baby) baby).isCrying()) {
+    public void generateCryingBabies(List<Inhabitant> inhabitants) {
+        for (Inhabitant inhabitant: inhabitants) {
+            if (inhabitant instanceof Baby baby) {
+                if (!baby.isCrying()) {
                     if (random.nextDouble() < 0.1) {
-                        Event newEvent = ((Baby) baby).cry();
+                        Event newEvent = baby.cry();
                         eventQueue.add(newEvent);
                         EventBus.getInstance().publishEvent(newEvent);
                     }
@@ -149,13 +152,12 @@ public final class Simulation {
         }
     }
 
-    public void generatePetEvents() {
-        List<Inhabitant> inhabitants = getInhabitants();
-        for (Inhabitant animal : inhabitants) {
-            if (animal instanceof Animal) {
-                if (!((Animal) animal).isDistressed()) {
+    public void generatePetEvents(List<Inhabitant> inhabitants) {
+        for (Inhabitant inhabitant : inhabitants) {
+            if (inhabitant instanceof Animal animal) {
+                if (!animal.isDistressed()) {
                     if (random.nextDouble() < 0.1) {
-                        Event newEvent = ((Animal) animal).seekAttention();
+                        Event newEvent = animal.seekAttention();
                         eventQueue.add(newEvent);
                         EventBus.getInstance().publishEvent(newEvent);
                     }

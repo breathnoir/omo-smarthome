@@ -6,6 +6,7 @@ import smarthome.entities.Room;
 import smarthome.entities.UsableObject;
 import smarthome.events.Event;
 import smarthome.task.Task;
+import smarthome.task.UseObjectTask;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -53,6 +54,7 @@ public abstract class Inhabitant {
         if (!isBusy()) {
             for (UsableObject obj : usableObjects) {
                 if (obj.isFree()) {
+                    assignTask(new UseObjectTask(this, obj));
                     obj.use(this);
                     return;
                 }

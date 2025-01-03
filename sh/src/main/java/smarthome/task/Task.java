@@ -3,7 +3,7 @@ package smarthome.task;
 import smarthome.entities.inhabitants.Inhabitant;
 
 abstract public class Task {
-    private int remainingTicks;
+    int remainingTicks;
     protected Inhabitant assignee;
 
     public Task(int duration, Inhabitant assignee) {

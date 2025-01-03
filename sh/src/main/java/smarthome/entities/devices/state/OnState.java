@@ -10,7 +10,7 @@ public class OnState implements DeviceState{
         this.device = device;
     }
     public void enable() {
-        device.useElectricity();
+        device.setUsingElectricity(true);
     }
 
     public void disable() {
@@ -25,6 +25,7 @@ public class OnState implements DeviceState{
     @Override
     public BrokenDeviceEvent breakDevice() {
         device.setState(device.getBrokenState());
+        device.setUsingElectricity(false);
         System.out.println(device.getName() + " is broken.");
         BrokenDeviceEvent event = new BrokenDeviceEvent(device);
         return event;

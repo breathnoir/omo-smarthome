@@ -4,7 +4,6 @@ package smarthome.entities.devices;
 import smarthome.HouseComponent;
 import smarthome.entities.Room;
 import smarthome.events.BrokenDeviceEvent;
-import smarthome.events.EventBus;
 import smarthome.iterators.HouseComponentIterator;
 import smarthome.iterators.NullIterator;
 import smarthome.Visitor;
@@ -17,14 +16,13 @@ public class Device implements HouseComponent {
     private String name;
     private final double electricityUsage;
     private double electricityUsed = 0;
+    private boolean isUsingElectricity = false;
     private Room room;
 
     private DeviceState onState;
     private DeviceState offState;
     private DeviceState brokenState;
     private DeviceState state;
-
-    private EventBus eventBus = EventBus.getInstance();
 
     public Device(Room room, String name, double electricityUsage) {
         this.room = room;
@@ -40,16 +38,11 @@ public class Device implements HouseComponent {
     }
 
     public void useElectricity(){
-        electricityUsed += electricityUsage;
+        if (isUsingElectricity) electricityUsed += electricityUsage;
     }
 
     public Room getRoom() {
         return room;
-    }
-
-    public void use() {
-        setState(onState);
-
     }
 
     public void enable() {
@@ -66,6 +59,10 @@ public class Device implements HouseComponent {
 
     public void setState(DeviceState state) {
         this.state = state;
+    }
+
+    public boolean isBroken(){
+        return state == brokenState;
     }
 
     public DeviceState getOnState() {
@@ -94,6 +91,10 @@ public class Device implements HouseComponent {
 
     public double getElectricityUsed() {
         return electricityUsed;
+    }
+
+    public void setUsingElectricity(boolean usingElectricity) {
+        isUsingElectricity = usingElectricity;
     }
 
     @Override
