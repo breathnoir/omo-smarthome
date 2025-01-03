@@ -10,6 +10,7 @@ import smarthome.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Room implements HouseComponent {
     private String name;
@@ -112,6 +113,10 @@ public class Room implements HouseComponent {
 
     public List<HouseComponent> getDevices() {
         return devices;
+    }
+
+    public List<Device> getAllDevices() {
+        return devices.stream().map(Device.class::cast).collect(Collectors.toList());
     }
 
     public void setObservers(List<Observer> observers) {

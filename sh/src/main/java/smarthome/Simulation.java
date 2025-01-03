@@ -1,20 +1,23 @@
 package smarthome;
 
 import smarthome.config.ChainBuilder;
-import smarthome.entities.Floor;
 import smarthome.entities.House;
-import smarthome.entities.Room;
 import smarthome.entities.devices.Device;
+import smarthome.entities.inhabitants.Animal;
+import smarthome.entities.inhabitants.Baby;
 import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.events.BrokenDeviceEvent;
+import smarthome.events.DistressedPetEvent;
 import smarthome.events.Event;
 import smarthome.events.EventBus;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
+import java.util.Random;
 
 public final class Simulation {
-    private final int TICS = 10;
+    private final int TICS = 100;
     private static House house;
     private Queue<Event> eventQueue = new LinkedList<>();
     private static Simulation instance;
@@ -40,38 +43,60 @@ public final class Simulation {
 
         Inhabitant chain = ChainBuilder.buildChain(house.getInhabitants());
         EventBus.getInstance().registerChain(BrokenDeviceEvent.class, chain);
+        EventBus.getInstance().registerChain(DistressedPetEvent.class, chain);
 
-        Floor floor = (Floor) house.getFloors().get(0);
-        Room room = (Room) floor.getRooms().get(0);
-        Device device = (Device) room.getDevices().get(1);
-        Device device2 = (Device) room.getDevices().get(0);
-        Device device3 = (Device) room.getDevices().get(2);
-        Inhabitant inhabitant = house.getInhabitants().get(0);
-        Inhabitant inhabitant2 = house.getInhabitants().get(1);
+        List<Inhabitant> inhabitants = house.getInhabitants();
+        List<Device> devices = house.getAllFloors().stream()
+                .flatMap(floor -> floor.getAllRooms().stream()
+                        .flatMap(room -> room.getAllDevices().stream())).toList();
 
-        for (int tick = 0; tick < 10; tick++) {
+        for (int tick = 0; tick < TICS; tick++) {
             System.out.println("Tick " + tick);
+
+            // Publish unhandled events
             for (Event event : eventQueue) {
                 EventBus.getInstance().publishEvent(event);
             }
-            // Generate random events
-            if (tick == 2) {
-                Event newevent = device.breakDevice();
-                eventQueue.add(newevent);
-                EventBus.getInstance().publishEvent(newevent);
+            Random random = new Random();
+
+            //TODO: add check if device is already broken
+
+            // Generate device breakdown
+            for (Device device : devices) {
+                if (random.nextDouble() < 0.1) {
+                    Event newEvent = device.breakDevice();
+                    eventQueue.add(newEvent);
+                    EventBus.getInstance().publishEvent(newEvent);
+                }
             }
-            if (tick == 2) {
-                Event newevent = device2.breakDevice();
-                eventQueue.add(newevent);
-                EventBus.getInstance().publishEvent(newevent);
+
+            //TODO: add check if pet is already distressed
+
+            // Generate pet events
+            for (Inhabitant animal : inhabitants) {
+                if (animal instanceof Animal) {
+                    if (random.nextDouble() < 0.1) {
+                        Event newEvent = ((Animal) animal).seekAttention();
+                        eventQueue.add(newEvent);
+                        EventBus.getInstance().publishEvent(newEvent);
+                    }
+                }
             }
-            if (tick == 2) {
-                Event newevent = device3.breakDevice();
-                eventQueue.add(newevent);
-                EventBus.getInstance().publishEvent(newevent);
+
+            //TODO: add check if baby is already crying
+
+            // Generate baby events
+            for (Inhabitant baby: inhabitants) {
+                if (baby instanceof Baby) {
+                    if (random.nextDouble() < 0.1) {
+                        Event newEvent = ((Baby) baby).cry();
+                        eventQueue.add(newEvent);
+                        EventBus.getInstance().publishEvent(newEvent);
+                    }
+                }
             }
-            inhabitant.progressTask();
-            inhabitant2.progressTask();
+
+            inhabitants.forEach(Inhabitant::progressTask);
 
         }
 

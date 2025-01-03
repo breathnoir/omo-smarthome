@@ -7,6 +7,7 @@ import smarthome.iterators.HouseComponentIterator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Floor implements HouseComponent {
     private String name;
@@ -26,6 +27,9 @@ public class Floor implements HouseComponent {
 
     public List<HouseComponent> getRooms() {
         return rooms;
+    }
+    public List<Room> getAllRooms() {
+        return rooms.stream().map(Room.class::cast).collect(Collectors.toList());
     }
 
     public void addRoom(Room room) {

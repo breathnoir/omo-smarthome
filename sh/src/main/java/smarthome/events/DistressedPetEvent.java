@@ -3,7 +3,7 @@ package smarthome.events;
 import smarthome.entities.inhabitants.Animal;
 
 public class DistressedPetEvent implements Event {
-    private Animal animal;
+    private final Animal animal;
 
     public DistressedPetEvent(Animal animal) {
         this.animal = animal;

@@ -7,7 +7,7 @@ public class FixDeviceTask extends Task {
     private final Device device;
 
     public FixDeviceTask(Device device, Inhabitant inhabitant) {
-        super(2, inhabitant);
+        super(3, inhabitant);
         this.device = device;
     }
 
