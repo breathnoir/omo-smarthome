@@ -1,6 +1,7 @@
 package smarthome.entities.devices.state;
 
 import smarthome.entities.devices.Device;
+import smarthome.events.BrokenDeviceEvent;
 
 public class OffState implements DeviceState{
     Device device;
@@ -20,5 +21,13 @@ public class OffState implements DeviceState{
 
     public void fix() {
 
+    }
+
+    @Override
+    public BrokenDeviceEvent breakDevice() {
+        device.setState(device.getBrokenState());
+        System.out.println(device.getName() + " is broken.");
+        BrokenDeviceEvent event = new BrokenDeviceEvent(device);
+        return event;
     }
 }

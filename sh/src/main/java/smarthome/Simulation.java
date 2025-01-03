@@ -6,10 +6,7 @@ import smarthome.entities.devices.Device;
 import smarthome.entities.inhabitants.Animal;
 import smarthome.entities.inhabitants.Baby;
 import smarthome.entities.inhabitants.Inhabitant;
-import smarthome.events.BrokenDeviceEvent;
-import smarthome.events.DistressedPetEvent;
-import smarthome.events.Event;
-import smarthome.events.EventBus;
+import smarthome.events.*;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -21,6 +18,7 @@ public final class Simulation {
     private static House house;
     private Queue<Event> eventQueue = new LinkedList<>();
     private static Simulation instance;
+    Random random = new Random();
 
     private Simulation() {}
 
@@ -31,24 +29,13 @@ public final class Simulation {
         return instance;
     }
 
-    public void setHouse(House house) {
-        Simulation.house = house;
-    }
-
     public void run() {
         if (house == null) {
             System.out.println("House is null!");
             return;
         }
 
-        Inhabitant chain = ChainBuilder.buildChain(house.getInhabitants());
-        EventBus.getInstance().registerChain(BrokenDeviceEvent.class, chain);
-        EventBus.getInstance().registerChain(DistressedPetEvent.class, chain);
-
-        List<Inhabitant> inhabitants = house.getInhabitants();
-        List<Device> devices = house.getAllFloors().stream()
-                .flatMap(floor -> floor.getAllRooms().stream()
-                        .flatMap(room -> room.getAllDevices().stream())).toList();
+        registerChains();
 
         for (int tick = 0; tick < TICS; tick++) {
             System.out.println("Tick " + tick);
@@ -57,46 +44,14 @@ public final class Simulation {
             for (Event event : eventQueue) {
                 EventBus.getInstance().publishEvent(event);
             }
-            Random random = new Random();
 
-            //TODO: add check if device is already broken
+            generateDeviceBreakdown();
 
-            // Generate device breakdown
-            for (Device device : devices) {
-                if (random.nextDouble() < 0.1) {
-                    Event newEvent = device.breakDevice();
-                    eventQueue.add(newEvent);
-                    EventBus.getInstance().publishEvent(newEvent);
-                }
-            }
+            generateCryingBabies();
 
-            //TODO: add check if pet is already distressed
+            generatePetEvents();
 
-            // Generate pet events
-            for (Inhabitant animal : inhabitants) {
-                if (animal instanceof Animal) {
-                    if (random.nextDouble() < 0.1) {
-                        Event newEvent = ((Animal) animal).seekAttention();
-                        eventQueue.add(newEvent);
-                        EventBus.getInstance().publishEvent(newEvent);
-                    }
-                }
-            }
-
-            //TODO: add check if baby is already crying
-
-            // Generate baby events
-            for (Inhabitant baby: inhabitants) {
-                if (baby instanceof Baby) {
-                    if (random.nextDouble() < 0.1) {
-                        Event newEvent = ((Baby) baby).cry();
-                        eventQueue.add(newEvent);
-                        EventBus.getInstance().publishEvent(newEvent);
-                    }
-                }
-            }
-
-            inhabitants.forEach(Inhabitant::progressTask);
+            getInhabitants().forEach(Inhabitant::progressTask);
 
         }
 
@@ -104,7 +59,71 @@ public final class Simulation {
         house.acceptVisitor(report);
     }
 
+    public void setHouse(House house) {
+        Simulation.house = house;
+    }
+
     public Queue<Event> getEventQueue() {
         return eventQueue;
+    }
+
+    public List<Device> getDevices(){
+        return house.getAllFloors().stream()
+                .flatMap(floor -> floor.getAllRooms().stream()
+                        .flatMap(room -> room.getAllDevices().stream())).toList();
+    }
+
+    public List<Inhabitant> getInhabitants() {
+        return house.getInhabitants();
+    }
+
+    public void registerChains(){
+        Inhabitant chain = ChainBuilder.buildChain(getInhabitants());
+        EventBus.getInstance().registerChain(BrokenDeviceEvent.class, chain);
+        EventBus.getInstance().registerChain(DistressedPetEvent.class, chain);
+        EventBus.getInstance().registerChain(CryingBabyEvent.class, chain);
+    }
+
+    public void generateDeviceBreakdown(){
+        List<Device> devices = getDevices();
+        for (Device device : devices) {
+            if (random.nextDouble() < 0.1) {
+                Event newEvent = device.breakDevice();
+                if (newEvent != null) {
+                    eventQueue.add(newEvent);
+                    EventBus.getInstance().publishEvent(newEvent);
+                }
+            }
+        }
+    }
+
+    public void generateCryingBabies() {
+        List<Inhabitant> inhabitants = getInhabitants();
+        for (Inhabitant baby: inhabitants) {
+            if (baby instanceof Baby) {
+                if (!((Baby) baby).isCrying()) {
+                    if (random.nextDouble() < 0.1) {
+                        Event newEvent = ((Baby) baby).cry();
+                        eventQueue.add(newEvent);
+                        EventBus.getInstance().publishEvent(newEvent);
+                    }
+                }
+            }
+        }
+    }
+
+    public void generatePetEvents() {
+        List<Inhabitant> inhabitants = getInhabitants();
+        for (Inhabitant animal : inhabitants) {
+            if (animal instanceof Animal) {
+                if (!((Animal) animal).isDistressed()) {
+                    if (random.nextDouble() < 0.1) {
+                        Event newEvent = ((Animal) animal).seekAttention();
+                        eventQueue.add(newEvent);
+                        EventBus.getInstance().publishEvent(newEvent);
+                    }
+                }
+            }
+        }
     }
 }

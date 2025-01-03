@@ -6,12 +6,15 @@ import smarthome.events.Event;
 
 public class Baby extends Inhabitant {
 
+    private boolean isCrying = false;
+
     public Baby(String name, int age) {
         super(name, age);
     }
 
     public CryingBabyEvent cry(){
         System.out.println("Baby " + name + " is crying");
+        isCrying = true;
         return new CryingBabyEvent(this);
     }
 
@@ -23,5 +26,13 @@ public class Baby extends Inhabitant {
     @Override
     protected void processEvent(Event event) {
 
+    }
+
+    public boolean isCrying() {
+        return isCrying;
+    }
+
+    public void setCrying(boolean crying) {
+        isCrying = crying;
     }
 }

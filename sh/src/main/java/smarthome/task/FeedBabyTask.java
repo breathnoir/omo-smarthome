@@ -12,6 +12,8 @@ public class FeedBabyTask extends Task {
 
     @Override
     public void execute() {
+        baby.setCrying(false);
         System.out.println(assignee.name + " fed baby " + baby.name);
+        System.out.println("Baby " + baby.name + " is not crying anymore");
     }
 }
