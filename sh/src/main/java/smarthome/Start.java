@@ -2,26 +2,18 @@ package smarthome;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import smarthome.config.*;
-import smarthome.entities.Floor;
 import smarthome.entities.House;
-import smarthome.entities.Room;
 import smarthome.entities.builders.FloorBuilder;
 import smarthome.entities.builders.HouseBuilder;
 import smarthome.entities.builders.RoomBuilder;
-import smarthome.entities.devices.Device;
 import smarthome.entities.equipment.Equipment;
 import smarthome.entities.equipment.EquipmentFactory;
 import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.entities.inhabitants.InhabitantFactory;
-import smarthome.events.BrokenDeviceEvent;
-import smarthome.events.Event;
-import smarthome.events.EventBus;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class Start {
     public static void main(String[] args) {

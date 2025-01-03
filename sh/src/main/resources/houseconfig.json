@@ -9,10 +9,13 @@
           "devices": [
             {"type": "Heater", "name": "Xiaomi heater", "electricityUsage": 5},
             {"type": "TV", "name": "Philips tv", "electricityUsage": 5},
-            {"type": "PC", "name": "living room pc", "electricityUsage": 5}
+            {"type": "PC", "name": "living room pc", "electricityUsage": 5},
+            {"type":  "AirConditioner", "name":  "LG AC", "electricityUsage": 7},
+            {"type":  "Blinds", "name":  "living room blinds", "electricityUsage": 1}
           ],
           "sensors": [
-            {"type": "temperature", "name": "Temperature Sensor 1"}
+            {"type": "Temperature", "name": "Temperature Sensor 1"},
+            {"type": "Wind", "name": "Wind Sensor 1"}
           ]
         }
       ]

@@ -11,11 +11,11 @@ public class BrokenState implements DeviceState{
     }
 
     public void enable() {
-        System.out.println("device " + device.getName() + " is broken");
+//        System.out.println("device " + device.getName() + " is broken");
     }
 
     public void disable() {
-        System.out.println("device " + device.getName() + " is broken");
+//        System.out.println("device " + device.getName() + " is broken");
     }
 
     public void fix() {

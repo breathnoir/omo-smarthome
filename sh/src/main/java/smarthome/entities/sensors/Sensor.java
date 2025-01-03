@@ -2,13 +2,19 @@ package smarthome.entities.sensors;
 
 import smarthome.entities.Room;
 
-public class Sensor {
+import java.util.Random;
+
+public abstract class Sensor {
     private String name;
-    private Room room;
+    protected Room room;
+    Random random = new Random();
+
     public Sensor(Room room, String name) {
         this.room = room;
         this.name = name;
     }
+
+    public abstract void updateStat();
 
     public String getName() {
         return name;

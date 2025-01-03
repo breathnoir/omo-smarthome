@@ -17,11 +17,11 @@ public class Room implements HouseComponent {
     private List<HouseComponent> devices = new ArrayList<>();
     private List<Observer> observers = new ArrayList<>();
     private List<Sensor> sensors = new ArrayList<>();
-    private double temperature;
-    private double humidity;
-    private double windSpeed;
-    private double lightning;
-    private boolean motionDetected;
+    private double temperature = 22.0;
+    private double humidity = 50.0;
+    private double windSpeed = 0;
+    private double lightning = 700;
+    private boolean motionDetected = false;
 
     public Room(String roomName) {
         this.name = roomName;
@@ -44,7 +44,7 @@ public class Room implements HouseComponent {
         observers.remove(observer);
     }
 
-    private void notifyObservers() {
+    public void notifyObservers() {
         for (Observer observer : observers) {
             observer.update();
         }
@@ -121,5 +121,9 @@ public class Room implements HouseComponent {
 
     public void setObservers(List<Observer> observers) {
         this.observers = observers;
+    }
+
+    public List<Sensor> getSensors() {
+        return sensors;
     }
 }
