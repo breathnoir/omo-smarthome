@@ -3,10 +3,12 @@ package smarthome.entities.inhabitants;
 import smarthome.Simulation;
 import smarthome.entities.Floor;
 import smarthome.entities.Room;
+import smarthome.entities.UsableObject;
 import smarthome.events.Event;
 import smarthome.task.Task;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public abstract class Inhabitant {
@@ -45,6 +47,18 @@ public abstract class Inhabitant {
 
     public void assignTask(Task task) {
         taskQueue.add(task);
+    }
+
+    public void useAvailableObject(List<UsableObject> usableObjects) {
+        if (!isBusy()) {
+            for (UsableObject obj : usableObjects) {
+                if (obj.isFree()) {
+                    obj.use(this);
+                    return;
+                }
+            }
+            System.out.println(name + " is waiting as no UsableObjects are available.");
+        }
     }
 
     public void progressTask() {

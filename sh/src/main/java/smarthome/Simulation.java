@@ -3,6 +3,7 @@ package smarthome;
 import smarthome.config.ChainBuilder;
 import smarthome.entities.House;
 import smarthome.entities.Room;
+import smarthome.entities.UsableObject;
 import smarthome.entities.devices.Device;
 import smarthome.entities.inhabitants.Animal;
 import smarthome.entities.inhabitants.Baby;
@@ -52,18 +53,22 @@ public final class Simulation {
                 EventBus.getInstance().publishEvent(event); // Safely process events
             }
 
-            generateDeviceBreakdown();
+//            generateDeviceBreakdown();
 
 //            generateCryingBabies();
 
 //            generatePetEvents();
 
+            for (Inhabitant inhabitant : getInhabitants()){
+                if (!inhabitant.isBusy()) inhabitant.useAvailableObject(getUsableObjects());
+            }
+
             getInhabitants().forEach(Inhabitant::progressTask);
 
-            getRooms().forEach(room -> {
-                this.updateRoomStats(room);
-                room.notifyObservers();
-            });
+//            getRooms().forEach(room -> {
+//                this.updateRoomStats(room);
+//                room.notifyObservers();
+//            });
 
         }
 
@@ -83,6 +88,14 @@ public final class Simulation {
         return house.getAllFloors().stream()
                 .flatMap(floor -> floor.getAllRooms().stream()
                         .flatMap(room -> room.getAllDevices().stream())).toList();
+    }
+
+    public List<UsableObject> getUsableObjects() {
+        List<UsableObject> allObjects = new java.util.ArrayList<>(getDevices().stream()
+                .filter(device -> device instanceof UsableObject).map(device -> (UsableObject) device).toList());
+        allObjects.addAll( house.getEquipment().stream()
+                .filter(eq -> eq instanceof UsableObject).map(eq -> (UsableObject) eq).toList());
+        return allObjects;
     }
 
     public List<Room> getRooms(){

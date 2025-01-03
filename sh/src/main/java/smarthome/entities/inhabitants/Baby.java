@@ -1,8 +1,11 @@
 package smarthome.entities.inhabitants;
 
 
+import smarthome.entities.UsableObject;
 import smarthome.events.CryingBabyEvent;
 import smarthome.events.Event;
+
+import java.util.List;
 
 public class Baby extends Inhabitant {
 
@@ -35,4 +38,7 @@ public class Baby extends Inhabitant {
     public void setCrying(boolean crying) {
         isCrying = crying;
     }
+
+    @Override
+    public void useAvailableObject(List<UsableObject> usableObjects){}
 }

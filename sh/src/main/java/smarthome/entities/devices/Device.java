@@ -47,6 +47,11 @@ public class Device implements HouseComponent {
         return room;
     }
 
+    public void use() {
+        setState(onState);
+
+    }
+
     public void enable() {
         state.enable();
     }
