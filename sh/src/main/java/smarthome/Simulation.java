@@ -10,6 +10,7 @@ import smarthome.entities.inhabitants.Baby;
 import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.entities.sensors.Sensor;
 import smarthome.events.*;
+import smarthome.task.WanderAroundTheHouseTask;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -53,7 +54,9 @@ public final class Simulation {
 
             // Publish unhandled events
             for (Event event : currentEvents) {
-                EventBus.getInstance().publishEvent(event); // Safely process events
+                if (!EventBus.getInstance().publishEvent(event)){
+                    eventQueue.add(event);
+                }
             }
 
             generateDeviceBreakdown(devices);
@@ -97,7 +100,7 @@ public final class Simulation {
 
     public List<UsableObject> getUsableObjects() {
         List<UsableObject> allObjects = new java.util.ArrayList<>(getDevices().stream()
-                .filter(device -> device instanceof UsableObject).map(device -> (UsableObject) device).toList());
+                .filter(device -> device instanceof UsableObject && !device.isBroken()).map(device -> (UsableObject) device).toList());
         allObjects.addAll( house.getEquipment().stream()
                 .filter(eq -> eq instanceof UsableObject).map(eq -> (UsableObject) eq).toList());
         return allObjects;
@@ -160,6 +163,9 @@ public final class Simulation {
                         Event newEvent = animal.seekAttention();
                         eventQueue.add(newEvent);
                         EventBus.getInstance().publishEvent(newEvent);
+                    } else {
+                        List<Room> rooms = getRooms();
+                        animal.assignTask(new WanderAroundTheHouseTask(animal, rooms.get(random.nextInt(rooms.size()))));
                     }
                 }
             }

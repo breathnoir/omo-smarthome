@@ -21,15 +21,21 @@ public class Adult extends Inhabitant {
     public void processEvent(Event event) {
         if (event instanceof BrokenDeviceEvent brokenDeviceEvent) {
             System.out.println(name + " is attending to fix device: " + brokenDeviceEvent.getDevice().getName());
-            assignTask(new FindManualTask(brokenDeviceEvent.getDevice(), this));
+            Task newTask = new FindManualTask(brokenDeviceEvent.getDevice(), this);
+            assignTask(newTask);
+            moveTo(newTask.getLocation());
             assignTask(new FixDeviceTask(brokenDeviceEvent.getDevice(), this));
 
         } else if (event instanceof DistressedPetEvent distressedPetEvent) {
             System.out.println(name + " is attending to check " + distressedPetEvent.getAnimal().name);
-            assignTask(new ComfortPetTask(distressedPetEvent.getAnimal(), 1,this));
+            Task newTask = new ComfortPetTask(distressedPetEvent.getAnimal(), 1,this);
+            assignTask(newTask);
+            moveTo(newTask.getLocation());
         } else if (event instanceof CryingBabyEvent cryingBabyEvent) {
             System.out.println(name + " is attending to help " + cryingBabyEvent.getBaby().name);
-            assignTask(new ComfortBabyTask(cryingBabyEvent.getBaby(), this));
+            Task newTask = new ComfortBabyTask(cryingBabyEvent.getBaby(), this);
+            assignTask(newTask);
+            moveTo(newTask.getLocation());
             assignTask(new FeedBabyTask(cryingBabyEvent.getBaby(), this));
         }
     }

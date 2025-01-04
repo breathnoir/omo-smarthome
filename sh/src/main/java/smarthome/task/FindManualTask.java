@@ -7,7 +7,7 @@ public class FindManualTask extends Task {
     private final Device device;
 
     public FindManualTask(Device device, Inhabitant inhabitant) {
-        super(1, inhabitant);
+        super(1, inhabitant, device.getRoom());
         this.device = device;
     }
 

@@ -1,5 +1,6 @@
 package smarthome.events;
 
+import smarthome.entities.Room;
 import smarthome.entities.inhabitants.Animal;
 
 public class DistressedPetEvent implements Event {
@@ -10,7 +11,7 @@ public class DistressedPetEvent implements Event {
     }
 
     @Override
-    public String getLocation() {
+    public Room getLocation() {
         return animal.getLocation();
     }
 

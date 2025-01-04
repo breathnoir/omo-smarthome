@@ -7,7 +7,7 @@ import smarthome.entities.inhabitants.Inhabitant;
 public class UseObjectTask extends Task {
     UsableObject object;
     public UseObjectTask(Inhabitant assignee, UsableObject object) {
-        super(3, assignee);
+        super(3, assignee, object.getRoom());
         this.object = object;
     }
 

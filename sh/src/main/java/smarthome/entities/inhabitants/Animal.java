@@ -17,6 +17,7 @@ public class Animal extends Inhabitant {
     }
 
     public DistressedPetEvent seekAttention() {
+        isDistressed = true;
         System.out.println(species + " " + name + " is seeking attention.");
         return new DistressedPetEvent(this);
     }

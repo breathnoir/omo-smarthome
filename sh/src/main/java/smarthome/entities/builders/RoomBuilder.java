@@ -4,6 +4,7 @@ import smarthome.entities.Room;
 import smarthome.entities.devices.Device;
 import smarthome.entities.devices.DeviceFactory;
 import smarthome.entities.devices.Observer;
+import smarthome.entities.sensors.MotionSensor;
 import smarthome.entities.sensors.Sensor;
 import smarthome.entities.sensors.SensorFactory;
 
@@ -24,6 +25,9 @@ public class RoomBuilder {
     public void addSensor(String sensorType, String name) {
         Sensor sensor = SensorFactory.createSensor(sensorType, room, name);
         room.addSensor(sensor);
+        if (sensor instanceof MotionSensor) {
+            room.setMotionSensor((MotionSensor) sensor);
+        }
     }
 
     public Room build() {

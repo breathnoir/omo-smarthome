@@ -1,7 +1,6 @@
 package smarthome.entities.inhabitants;
 
 import smarthome.Simulation;
-import smarthome.entities.Floor;
 import smarthome.entities.Room;
 import smarthome.entities.UsableObject;
 import smarthome.events.Event;
@@ -16,7 +15,6 @@ public abstract class Inhabitant {
     public String name;
     private boolean isHome;
     private Room room;
-    private Floor floor;
     private int age;
     protected Inhabitant next;
     protected Task currentTask;
@@ -28,14 +26,16 @@ public abstract class Inhabitant {
     }
 
 
-    public void handleEvent(Event event) {
+    public boolean handleEvent(Event event) {
         if (canHandle(event) && !isBusy()) {
             processEvent(event);
             Simulation.getInstance().getEventQueue().remove(event);
+            return true;
         } else if (next != null) {
-            next.handleEvent(event);
+            return next.handleEvent(event);
         } else {
             System.out.println("No one could handle the event: " + event.getClass().getSimpleName() + ". Event remained in the queue.");
+            return false;
         }
     }
 
@@ -72,8 +72,19 @@ public abstract class Inhabitant {
         }
     }
 
-    public String getLocation() {
-        return null;
+    public void moveTo(Room nextRoom) {
+        if (room != null) {
+            room.removeInhabitants(this);
+        }
+        room = nextRoom;
+        if (nextRoom != null) {
+            nextRoom.addInhabitants(this);
+            System.out.println(name + " moved to " + nextRoom.getName());
+        }
+    }
+
+    public Room getLocation() {
+        return room;
     }
 
     public boolean isBusy(){

@@ -15,6 +15,7 @@ public class OnState implements DeviceState{
 
     public void disable() {
         device.setState(device.getOffState());
+        device.setUsingElectricity(false);
         System.out.println("device " + device.getName() + " is off");
     }
 
@@ -26,8 +27,8 @@ public class OnState implements DeviceState{
     public BrokenDeviceEvent breakDevice() {
         device.setState(device.getBrokenState());
         device.setUsingElectricity(false);
-        System.out.println(device.getName() + " is broken.");
         BrokenDeviceEvent event = new BrokenDeviceEvent(device);
+        System.out.println(device.getName() + " is broken. ");
         return event;
     }
 }

@@ -6,4 +6,5 @@ public interface UsableObject {
     boolean isFree();
     void use(Inhabitant user);
     void release();
+    Room getRoom();
 }

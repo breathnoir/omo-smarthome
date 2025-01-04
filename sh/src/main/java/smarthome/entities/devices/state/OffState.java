@@ -26,8 +26,8 @@ public class OffState implements DeviceState{
     @Override
     public BrokenDeviceEvent breakDevice() {
         device.setState(device.getBrokenState());
-        System.out.println(device.getName() + " is broken.");
         BrokenDeviceEvent event = new BrokenDeviceEvent(device);
+        System.out.println(device.getName() + " is broken. ");
         return event;
     }
 }

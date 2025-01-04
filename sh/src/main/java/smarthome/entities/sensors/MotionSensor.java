@@ -10,6 +10,10 @@ public class MotionSensor extends Sensor {
 
     @Override
     public void updateStat() {
+        room.setMotionDetected(isMotionDetected());
+    }
 
+    public boolean isMotionDetected() {
+        return room.getInhabitantsCount() > 0;
     }
 }
