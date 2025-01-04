@@ -27,7 +27,7 @@ public class EventBus {
         if (chain != null) {
             return chain.handleEvent(event); // pass the event to the chain
         } else {
-//            System.out.println("No handlers available for event type: " + event.getClass().getSimpleName());
+            System.err.println("No handlers available for event type: " + event.getClass().getSimpleName());
             LoggerManager.eventLogger.info("No handlers available for event type: " + event.getClass().getSimpleName());
             return false;
         }

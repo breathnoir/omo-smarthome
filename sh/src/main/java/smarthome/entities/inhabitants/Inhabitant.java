@@ -86,6 +86,8 @@ public abstract class Inhabitant {
             nextRoom.addInhabitants(this);
 //            System.out.println(name + " moved to " + nextRoom.getName());
             LoggerManager.activityLogger.info(name + " moved to " + nextRoom.getName());
+            LoggerManager.sensorLogger.info(name + " moved to " + nextRoom.getName());
+
             isHome = true;
         } else {
 //            System.out.println(name + " is not home.");

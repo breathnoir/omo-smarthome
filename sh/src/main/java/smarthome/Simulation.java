@@ -38,7 +38,7 @@ public final class Simulation {
 
     public void run() {
         if (house == null) {
-            System.out.println("House is null!");
+            System.err.println("House is null!");
             return;
         }
 
@@ -48,11 +48,7 @@ public final class Simulation {
         List<Inhabitant> inhabitants = getInhabitants();
 
         for (int tick = 0; tick < TICS; tick++) {
-            System.out.println("Tick " + tick);
-            LoggerManager.eventLogger.info(String.format("Tick %d:", tick));
-            LoggerManager.eventLogger.info("                              ");
-            LoggerManager.activityLogger.info(String.format("Tick %d:", tick));
-            LoggerManager.activityLogger.info("                              ");
+            printTicks(tick);
 
             // Process events in the queue without modifying it directly to avoid ConcurrentModificationException
             Queue<Event> currentEvents = new LinkedList<>(eventQueue);
@@ -83,8 +79,7 @@ public final class Simulation {
 
             devices.forEach(Device::useElectricity);
 
-            LoggerManager.eventLogger.info("-----------------------------------");
-            LoggerManager.activityLogger.info("-----------------------------------");
+            printSeparators();
         }
 
         Visitor report = new ConsumptionReport();
@@ -126,8 +121,12 @@ public final class Simulation {
     public void updateRoomStats(Room room) {
 
         for (Sensor sensor: room.getSensors()) sensor.updateStat();
-        System.out.printf("Room Stats Updated: Temperature = %.1f, Humidity = %.1f, WindSpeed = %.1f, Lightning = %.1f for room %s%n",
-                room.getTemperature(), room.getHumidity(), room.getWindSpeed(), room.getLightning(), room.getName());
+//        System.out.printf("Room Stats Updated: Temperature = %.1f, Humidity = %.1f, WindSpeed = %.1f, Lightning = %.1f for room %s%n",
+//                room.getTemperature(), room.getHumidity(), room.getWindSpeed(), room.getLightning(), room.getName());
+        LoggerManager.sensorLogger.info(String.format(
+                "   >%s Stats Updated: Temperature = %.1f, Humidity = %.1f, WindSpeed = %.1f, Lightning = %.1f",
+                room.getName(), room.getTemperature(), room.getHumidity(), room.getWindSpeed(), room.getLightning()));
+
     }
 
     public void registerChains(){
@@ -180,5 +179,22 @@ public final class Simulation {
                 }
             }
         }
+    }
+
+    public void printTicks(int tick) {
+        System.out.println("Tick " + tick);
+        LoggerManager.eventLogger.info(String.format("Tick %d:", tick));
+        LoggerManager.eventLogger.info("                              ");
+        LoggerManager.activityLogger.info(String.format("Tick %d:", tick));
+        LoggerManager.activityLogger.info("                              ");
+        LoggerManager.sensorLogger.info(String.format("Tick %d:", tick));
+        LoggerManager.sensorLogger.info("                              ");
+    }
+
+    public void printSeparators() {
+        System.out.println("-----------------------------------");
+        LoggerManager.eventLogger.info("-----------------------------------");
+        LoggerManager.activityLogger.info("-----------------------------------");
+        LoggerManager.sensorLogger.info("-----------------------------------");
     }
 }
