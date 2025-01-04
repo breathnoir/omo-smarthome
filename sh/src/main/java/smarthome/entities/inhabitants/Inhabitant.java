@@ -55,6 +55,7 @@ public abstract class Inhabitant {
             for (UsableObject obj : usableObjects) {
                 if (obj.isFree()) {
                     assignTask(new UseObjectTask(this, obj));
+                    moveTo(obj.getRoom());
                     obj.use(this);
                     return;
                 }
@@ -80,6 +81,10 @@ public abstract class Inhabitant {
         if (nextRoom != null) {
             nextRoom.addInhabitants(this);
             System.out.println(name + " moved to " + nextRoom.getName());
+            isHome = true;
+        } else {
+            System.out.println(name + " is not home.");
+            isHome = false;
         }
     }
 

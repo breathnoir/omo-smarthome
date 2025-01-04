@@ -131,7 +131,7 @@ public final class Simulation {
 
     public void generateDeviceBreakdown(List<Device> devices){
         for (Device device : devices) {
-            if (random.nextDouble() < 0.1) {
+            if (random.nextDouble() < 0.03 && !device.isBroken()) {
                 Event newEvent = device.breakDevice();
                 if (newEvent != null) {
                     eventQueue.add(newEvent);
