@@ -1,12 +1,12 @@
 package smarthome.entities.devices;
 
 
-import smarthome.HouseComponent;
+import smarthome.reports.HouseComponent;
 import smarthome.entities.Room;
 import smarthome.events.BrokenDeviceEvent;
 import smarthome.iterators.HouseComponentIterator;
 import smarthome.iterators.NullIterator;
-import smarthome.Visitor;
+import smarthome.reports.Visitor;
 import smarthome.entities.devices.state.BrokenState;
 import smarthome.entities.devices.state.DeviceState;
 import smarthome.entities.devices.state.OffState;

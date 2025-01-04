@@ -10,6 +10,8 @@ import smarthome.entities.inhabitants.Baby;
 import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.entities.sensors.Sensor;
 import smarthome.events.*;
+import smarthome.reports.ConsumptionReport;
+import smarthome.reports.Visitor;
 import smarthome.task.WanderAroundTheHouseTask;
 
 import java.util.LinkedList;
@@ -82,6 +84,7 @@ public final class Simulation {
 
         Visitor report = new ConsumptionReport();
         house.acceptVisitor(report);
+        ConsumptionReport.getTotalUsage();
     }
 
     public void setHouse(House house) {

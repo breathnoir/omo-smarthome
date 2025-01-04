@@ -1,6 +1,6 @@
 package smarthome.iterators;
 
-import smarthome.HouseComponent;
+import smarthome.reports.HouseComponent;
 
 import java.util.List;
 

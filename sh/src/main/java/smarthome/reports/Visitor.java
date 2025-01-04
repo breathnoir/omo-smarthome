@@ -1,4 +1,4 @@
-package smarthome;
+package smarthome.reports;
 
 import smarthome.entities.Floor;
 import smarthome.entities.House;

@@ -1,7 +1,7 @@
 package smarthome.entities;
 
-import smarthome.HouseComponent;
-import smarthome.Visitor;
+import smarthome.reports.HouseComponent;
+import smarthome.reports.Visitor;
 import smarthome.entities.equipment.Equipment;
 import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.iterators.HouseComponentIterator;

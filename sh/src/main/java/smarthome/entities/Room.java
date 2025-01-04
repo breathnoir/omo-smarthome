@@ -1,6 +1,6 @@
 package smarthome.entities;
 
-import smarthome.HouseComponent;
+import smarthome.reports.HouseComponent;
 import smarthome.entities.devices.Device;
 import smarthome.entities.devices.Observer;
 import smarthome.entities.inhabitants.Inhabitant;
@@ -8,7 +8,7 @@ import smarthome.entities.sensors.MotionSensor;
 import smarthome.entities.sensors.Sensor;
 import smarthome.iterators.HouseComponentIterator;
 import smarthome.iterators.RoomIterator;
-import smarthome.Visitor;
+import smarthome.reports.Visitor;
 
 import java.util.ArrayList;
 import java.util.HashSet;
