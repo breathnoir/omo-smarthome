@@ -1,106 +1,258 @@
 Tick 0:
                               
-John moved to Living Room
-John is using Philips tv
+John moved to Storage Room
+John is using Storage PC
 Lucy moved to Living Room
-Lucy is using living room pc
-Emily moved to Kitchen
-Emily is using Panasonic Microwave
-Buddy moved to Kitchen
+Lucy is using Living TV
+Adam moved to Kitchen
+Adam is using Kitchen Microwave
+Karen moved to Kids Room
+Karen is using Kids TV
+Michael moved to Home Office
+Michael is using Office PC
+Emily moved to Gym
+Emily is using Gym PC
+Brian is not home.
+Brian is using Bicycle 1
+Sophie is not home.
+Sophie is using Bicycle 2
+David is not home.
+David is using Bicycle 3
+Whiskers moved to Home Office
+Apollo moved to Home Office
 -----------------------------------
 Tick 1:
                               
+Buddy moved to Guest Bathroom
+Whiskers moved to Storage Room
+Polly moved to Laundry Room
 -----------------------------------
 Tick 2:
                               
-John has stopped using Philips tv
-Lucy has stopped using living room pc
-Emily has stopped using Panasonic Microwave
-Buddy moved to Living Room
+John has stopped using Storage PC
+Lucy has stopped using Living TV
+Adam has stopped using Kitchen Microwave
+Karen has stopped using Kids TV
+Michael has stopped using Office PC
+Emily has stopped using Gym PC
+Brian has stopped using Bicycle 1
+Sophie has stopped using Bicycle 2
+David has stopped using Bicycle 3
+Whiskers moved to Living Room
+Polly moved to Kitchen
+Apollo moved to Guest Bedroom
 -----------------------------------
 Tick 3:
                               
-John moved to Bathroom
-Lucy is not home.
-Emily moved to Living Room
+John moved to Master Bedroom
+Lucy moved to Guest Bathroom
+Adam moved to Storage Room
+Adam is using Storage PC
+Karen moved to Living Room
+Karen is using Living TV
+Michael moved to Kitchen
+Michael is using Kitchen Microwave
+Emily moved to Kids Room
+Emily is using Kids TV
+Brian moved to Home Office
+Brian is using Office PC
+Sophie moved to Gym
+Sophie is using Gym PC
+David is not home.
+David is using Bicycle 1
+Buddy moved to Living Room
+Whiskers moved to Laundry Room
+Polly moved to Gym
+Apollo moved to Guest Bathroom
 -----------------------------------
 Tick 4:
                               
+Buddy moved to Laundry Room
+Whiskers moved to Kitchen
+Polly moved to Laundry Room
+Apollo moved to Kids Room
 -----------------------------------
 Tick 5:
                               
-Emily moved to Living Room
-Emily is using Philips tv
-Buddy moved to Living Room
+Adam has stopped using Storage PC
+Karen has stopped using Living TV
+Michael has stopped using Kitchen Microwave
+Emily has stopped using Kids TV
+Brian has stopped using Office PC
+Sophie has stopped using Gym PC
+David has stopped using Bicycle 1
+Buddy moved to Laundry Room
+Polly moved to Living Room
+Apollo moved to Laundry Room
 -----------------------------------
 Tick 6:
                               
+Adam moved to Kitchen
+Karen moved to Kids Room
+Michael moved to Laundry Room
+Emily moved to Storage Room
+Emily is using Storage PC
+Brian moved to Living Room
+Brian is using Living TV
+Sophie moved to Kitchen
+Sophie is using Kitchen Microwave
+David moved to Kids Room
+David is using Kids TV
+Buddy moved to Home Office
+Polly moved to Guest Bedroom
 -----------------------------------
 Tick 7:
                               
 John moved to Kitchen
-Lucy moved to Living Room
-Lucy is using living room pc
-Emily has stopped using Philips tv
-Buddy moved to Living Room
+Lucy moved to Home Office
+Adam moved to Home Office
+Adam is using Office PC
+Michael moved to Gym
+Michael is using Gym PC
+Buddy moved to Gym
+Polly moved to Laundry Room
+Apollo moved to Storage Room
 -----------------------------------
 Tick 8:
                               
-Emily moved to Living Room
+John is not home.
+John is using Bicycle 1
+Emily has stopped using Storage PC
+Brian has stopped using Living TV
+Sophie has stopped using Kitchen Microwave
+David has stopped using Kids TV
+Buddy moved to Living Room
+Whiskers moved to Master Bedroom
+Polly moved to Kitchen
 -----------------------------------
 Tick 9:
                               
-Lucy has stopped using living room pc
+Emily moved to Storage Room
+Emily is using Storage PC
+Brian moved to Living Room
+Brian is using Living TV
+Sophie moved to Kitchen
+Sophie is using Kitchen Microwave
+David moved to Kids Room
+David is using Kids TV
+Adam has stopped using Office PC
+Michael has stopped using Gym PC
+Buddy moved to Living Room
+Whiskers moved to Home Office
 -----------------------------------
 Tick 10:
                               
-Lucy is not home.
-Emily moved to Living Room
-Emily is using Philips tv
+Adam is not home.
+Karen moved to Kids Room
+Michael moved to Storage Room
+John has stopped using Bicycle 1
 Buddy moved to Kitchen
+Whiskers moved to Gym
 -----------------------------------
 Tick 11:
                               
-John moved to Kitchen
+John moved to Master Bedroom
+Lucy moved to Home Office
+Lucy is using Office PC
+Michael moved to Gym
+Michael is using Gym PC
+Emily has stopped using Storage PC
+Brian has stopped using Living TV
+Sophie has stopped using Kitchen Microwave
+David has stopped using Kids TV
+Buddy moved to Kitchen
+Polly moved to Guest Bedroom
+Apollo moved to Balcony
 -----------------------------------
 Tick 12:
                               
-Emily has stopped using Philips tv
-Buddy moved to Kitchen
+Emily moved to Gym
+Brian moved to Storage Room
+Brian is using Storage PC
+Sophie moved to Kitchen
+Sophie is using Kitchen Microwave
+David moved to Kids Room
+David is using Kids TV
+Lucy has stopped using Office PC
+Buddy moved to Gym
+Polly moved to Kids Room
+Apollo moved to Master Bedroom
 -----------------------------------
 Tick 13:
                               
-Emily moved to Living Room
-Emily is using Philips tv
-Buddy moved to Master Bedroom
+Lucy moved to Living Room
+Michael has stopped using Gym PC
+Buddy moved to Home Office
+Polly moved to Home Office
+Apollo moved to Guest Bedroom
 -----------------------------------
 Tick 14:
                               
-Lucy moved to Living Room
-Buddy moved to Master Bedroom
+Adam moved to Home Office
+Karen moved to Living Room
+Michael moved to Gym
+Emily moved to Gym
+Emily is using Gym PC
+Brian has stopped using Storage PC
+Sophie has stopped using Kitchen Microwave
+David has stopped using Kids TV
+Buddy moved to Living Room
+Apollo moved to Guest Bedroom
 -----------------------------------
 Tick 15:
                               
-John moved to Kitchen
-Emily has stopped using Philips tv
+John moved to Storage Room
+John is using Storage PC
+Michael moved to Kitchen
+Michael is using Kitchen Microwave
+Brian moved to Kids Room
+Brian is using Kids TV
+Sophie is not home.
+Sophie is using Bicycle 1
+David is not home.
+David is using Bicycle 2
+Whiskers moved to Laundry Room
+Polly moved to Master Bedroom
+Apollo moved to Guest Bathroom
 -----------------------------------
 Tick 16:
                               
-Emily moved to Living Room
-Emily is using Philips tv
+Emily has stopped using Gym PC
+Buddy moved to Kids Room
+Whiskers moved to Guest Bathroom
+Apollo moved to Home Office
 -----------------------------------
 Tick 17:
                               
+Lucy moved to Kids Room
+Emily moved to Living Room
+Emily is using Living TV
+John has stopped using Storage PC
+Michael has stopped using Kitchen Microwave
+Brian has stopped using Kids TV
+Sophie has stopped using Bicycle 1
+David has stopped using Bicycle 2
+Whiskers moved to Guest Bathroom
+Polly moved to Kids Room
+Apollo moved to Home Office
 -----------------------------------
 Tick 18:
                               
-Lucy moved to Master Bedroom
-Emily has stopped using Philips tv
-Buddy moved to Bathroom
+John moved to Guest Bedroom
+Adam is not home.
+Karen moved to Kids Room
+Michael moved to Home Office
+Brian moved to Storage Room
+Brian is using Storage PC
+Sophie moved to Kitchen
+Sophie is using Kitchen Microwave
+David moved to Kids Room
+David is using Kids TV
 -----------------------------------
 Tick 19:
                               
-John moved to Kitchen
-Emily moved to Living Room
-Emily is using Philips tv
+Karen moved to Home Office
+Michael moved to Kitchen
+Emily has stopped using Living TV
+Whiskers moved to Balcony
 -----------------------------------

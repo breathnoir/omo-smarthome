@@ -1,97 +1,208 @@
 Tick 0:
                               
+Whiskers wandered to Home Office
+Apollo wandered to Home Office
 -----------------------------------
 Tick 1:
                               
-Device living room pc in Living Room is broken
-No one could handle the event: BrokenDeviceEvent caused by Device living room pc. Event remained in the queue.
+Device Master Blinds in Master Bedroom is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Master Blinds. Event remained in the queue.
+Buddy wandered to Guest Bathroom
+Whiskers wandered to Storage Room
+Polly wandered to Laundry Room
 -----------------------------------
 Tick 2:
                               
-Baby Inhabitant Lox, 1 is crying
-No one could handle the event: CryingBabyEvent caused by Inhabitant Lox, 1. Event remained in the queue.
-Lucy found manual for living room pc
+No one could handle the event: BrokenDeviceEvent caused by Device Master Blinds. Event remained in the queue.
+Device Guest Bath Dehumidifier in Guest Bathroom is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Guest Bath Dehumidifier. Event remained in the queue.
+Whiskers wandered to Living Room
+Polly wandered to Kitchen
+Apollo wandered to Guest Bedroom
 -----------------------------------
 Tick 3:
                               
-Inhabitant John, 30 is attending to help Inhabitant Lox, 1
+Inhabitant John, 34 is attending to fix device: Master Blinds
+Inhabitant Lucy, 31 is attending to fix device: Guest Bath Dehumidifier
+John found manual for Master Blinds
+Lucy found manual for Guest Bath Dehumidifier
+Buddy wandered to Living Room
+Whiskers wandered to Laundry Room
+Polly wandered to Gym
+Apollo wandered to Guest Bathroom
 -----------------------------------
 Tick 4:
                               
-John comforted baby Lox
+Buddy wandered to Laundry Room
+Whiskers wandered to Kitchen
+Polly wandered to Laundry Room
+Apollo wandered to Kids Room
 -----------------------------------
 Tick 5:
                               
-Device living room blinds in Living Room is broken
-No one could handle the event: BrokenDeviceEvent caused by Device living room blinds. Event remained in the queue.
-Lucy fixed device: living room pc
+Cat Whiskers is seeking attention.
+No one could handle the event: DistressedPetEvent caused by Cat Whiskers. Event remained in the queue.
+Device Kids Lamp in Kids Room is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Kids Lamp. Event remained in the queue.
+Buddy wandered to Laundry Room
+Polly wandered to Living Room
+Apollo wandered to Laundry Room
 -----------------------------------
 Tick 6:
                               
-Device Bathroom Dehumidifier in Bathroom is broken
-No one could handle the event: BrokenDeviceEvent caused by Device Bathroom Dehumidifier. Event remained in the queue.
-John fed baby Lox
-Baby Lox is not crying anymore
-Lucy found manual for living room blinds
+Inhabitant Adam, 40 is attending to check Cat Whiskers
+Inhabitant Karen, 37 is attending to fix device: Kids Lamp
+Turtle Apollo is seeking attention.
+Inhabitant Michael, 29 is attending to check Turtle Apollo
+John fixed device: Master Blinds
+Lucy fixed device: Guest Bath Dehumidifier
+Adam comforted pet Whiskers
+Karen found manual for Kids Lamp
+Michael comforted pet Apollo
+Buddy wandered to Home Office
+Polly wandered to Guest Bedroom
 -----------------------------------
 Tick 7:
                               
-John found manual for Bathroom Dehumidifier
+Cat Whiskers is seeking attention.
+Inhabitant John, 34 is attending to check Cat Whiskers
+Device Office Heater in Home Office is broken
+Inhabitant Lucy, 31 is attending to fix device: Office Heater
+John comforted pet Whiskers
+Lucy found manual for Office Heater
+Buddy wandered to Gym
+Polly wandered to Laundry Room
+Apollo wandered to Storage Room
 -----------------------------------
 Tick 8:
                               
-Dog Buddy is seeking attention.
-No one could handle the event: DistressedPetEvent caused by Dog Buddy. Event remained in the queue.
+Buddy wandered to Living Room
+Whiskers wandered to Master Bedroom
+Polly wandered to Kitchen
 -----------------------------------
 Tick 9:
                               
-Inhabitant Emily, 8 is attending to check Buddy
-Lucy fixed device: living room blinds
+Baby Inhabitant Lox, 1 is crying
+No one could handle the event: CryingBabyEvent caused by Inhabitant Lox, 1. Event remained in the queue.
+Device Kids Humidifier in Kids Room is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Kids Humidifier. Event remained in the queue.
+Karen fixed device: Kids Lamp
+Buddy wandered to Living Room
+Whiskers wandered to Home Office
 -----------------------------------
 Tick 10:
                               
-John fixed device: Bathroom Dehumidifier
-Emily comforted pet Buddy
+Inhabitant Adam, 40 is attending to help Inhabitant Lox, 1
+Inhabitant Karen, 37 is attending to fix device: Kids Humidifier
+Turtle Apollo is seeking attention.
+Inhabitant Michael, 29 is attending to check Turtle Apollo
+Lucy fixed device: Office Heater
+Karen found manual for Kids Humidifier
+Michael comforted pet Apollo
+Buddy wandered to Kitchen
+Whiskers wandered to Gym
 -----------------------------------
 Tick 11:
                               
+Device Master AC in Master Bedroom is broken
+Inhabitant John, 34 is attending to fix device: Master AC
+John found manual for Master AC
+Adam comforted baby Lox
+Buddy wandered to Kitchen
+Polly wandered to Guest Bedroom
+Apollo wandered to Balcony
 -----------------------------------
 Tick 12:
                               
+Cat Whiskers is seeking attention.
+Inhabitant Emily, 9 is attending to check Whiskers
+Device Living TV in Living Room is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Living TV. Event remained in the queue.
+Device Office PC in Home Office is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Office PC. Event remained in the queue.
+Buddy wandered to Gym
+Polly wandered to Kids Room
+Apollo wandered to Master Bedroom
 -----------------------------------
 Tick 13:
                               
+Inhabitant Lucy, 31 is attending to fix device: Living TV
+No one could handle the event: BrokenDeviceEvent caused by Device Office PC. Event remained in the queue.
+Device Living Heater in Living Room is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Living Heater. Event remained in the queue.
+Lucy found manual for Living TV
+Adam fed baby Lox
+Baby Lox is not crying anymore
+Karen fixed device: Kids Humidifier
+Emily comforted pet Whiskers
+Buddy wandered to Home Office
+Polly wandered to Home Office
+Apollo wandered to Guest Bedroom
 -----------------------------------
 Tick 14:
                               
+Inhabitant Adam, 40 is attending to fix device: Office PC
+Inhabitant Karen, 37 is attending to fix device: Living Heater
+Cat Whiskers is seeking attention.
+Inhabitant Michael, 29 is attending to check Cat Whiskers
+John fixed device: Master AC
+Adam found manual for Office PC
+Karen found manual for Living Heater
+Michael comforted pet Whiskers
+Buddy wandered to Living Room
+Apollo wandered to Guest Bedroom
 -----------------------------------
 Tick 15:
                               
-Dog Buddy is seeking attention.
-No one could handle the event: DistressedPetEvent caused by Dog Buddy. Event remained in the queue.
+Whiskers wandered to Laundry Room
+Polly wandered to Master Bedroom
+Apollo wandered to Guest Bathroom
 -----------------------------------
 Tick 16:
                               
-Inhabitant Lucy, 30 is attending to check Dog Buddy
-Lucy comforted pet Buddy
+Device Kids Lamp in Kids Room is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Kids Lamp. Event remained in the queue.
+Device Guest Lamp in Guest Bedroom is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Guest Lamp. Event remained in the queue.
+Lucy fixed device: Living TV
+Buddy wandered to Kids Room
+Whiskers wandered to Guest Bathroom
+Apollo wandered to Home Office
 -----------------------------------
 Tick 17:
                               
-Device LG AC in Living Room is broken
-Device Kitchen Lamp in Kitchen is broken
-John found manual for LG AC
-Lucy found manual for Kitchen Lamp
+Inhabitant Lucy, 31 is attending to fix device: Kids Lamp
+No one could handle the event: BrokenDeviceEvent caused by Device Guest Lamp. Event remained in the queue.
+Lucy found manual for Kids Lamp
+Adam fixed device: Office PC
+Karen fixed device: Living Heater
+Whiskers wandered to Guest Bathroom
+Polly wandered to Kids Room
+Apollo wandered to Home Office
 -----------------------------------
 Tick 18:
                               
+Inhabitant John, 34 is attending to fix device: Guest Lamp
 Baby Inhabitant Lox, 1 is crying
-No one could handle the event: CryingBabyEvent caused by Inhabitant Lox, 1. Event remained in the queue.
+Inhabitant Adam, 40 is attending to help Inhabitant Lox, 1
+Dog Buddy is seeking attention.
+Inhabitant Karen, 37 is attending to check Dog Buddy
+Turtle Apollo is seeking attention.
+Inhabitant Michael, 29 is attending to check Turtle Apollo
+John found manual for Guest Lamp
+Karen comforted pet Buddy
+Michael comforted pet Apollo
 -----------------------------------
 Tick 19:
                               
-No one could handle the event: CryingBabyEvent caused by Inhabitant Lox, 1. Event remained in the queue.
-Dog Buddy is seeking attention.
-No one could handle the event: DistressedPetEvent caused by Dog Buddy. Event remained in the queue.
-Device Bathroom Dehumidifier in Bathroom is broken
-No one could handle the event: BrokenDeviceEvent caused by Device Bathroom Dehumidifier. Event remained in the queue.
+Turtle Apollo is seeking attention.
+Inhabitant Karen, 37 is attending to check Turtle Apollo
+Device Kitchen Blinds in Kitchen is broken
+Inhabitant Michael, 29 is attending to fix device: Kitchen Blinds
+Device Master Lamp in Master Bedroom is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Master Lamp. Event remained in the queue.
+Adam comforted baby Lox
+Karen comforted pet Apollo
+Michael found manual for Kitchen Blinds
+Whiskers wandered to Balcony
 -----------------------------------
