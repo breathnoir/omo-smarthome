@@ -152,4 +152,9 @@ public class Room implements HouseComponent {
     public void removeInhabitants(Inhabitant inhabitant) {
         inhabitants.remove(inhabitant);
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

@@ -4,6 +4,7 @@ import smarthome.events.BrokenDeviceEvent;
 import smarthome.events.CryingBabyEvent;
 import smarthome.events.DistressedPetEvent;
 import smarthome.events.Event;
+import smarthome.reports.LoggerManager;
 import smarthome.task.*;
 
 public class Adult extends Inhabitant {
@@ -27,12 +28,16 @@ public class Adult extends Inhabitant {
             assignTask(new FixDeviceTask(brokenDeviceEvent.getDevice(), this));
 
         } else if (event instanceof DistressedPetEvent distressedPetEvent) {
-            System.out.println(name + " is attending to check " + distressedPetEvent.getAnimal().name);
+//            System.out.println(name + " is attending to check " + distressedPetEvent.getAnimal().name);
+            LoggerManager.eventLogger.info(toString() + " is attending to check " + distressedPetEvent.getAnimal().toString());
+            //TODO
             Task newTask = new ComfortPetTask(distressedPetEvent.getAnimal(), 1,this);
             assignTask(newTask);
             moveTo(newTask.getLocation());
         } else if (event instanceof CryingBabyEvent cryingBabyEvent) {
-            System.out.println(name + " is attending to help " + cryingBabyEvent.getBaby().name);
+//            System.out.println(name + " is attending to help " + cryingBabyEvent.getBaby().name);
+            LoggerManager.eventLogger.info(toString() + " is attending to help " + cryingBabyEvent.getBaby().toString());
+            //TODO
             Task newTask = new ComfortBabyTask(cryingBabyEvent.getBaby(), this);
             assignTask(newTask);
             moveTo(newTask.getLocation());

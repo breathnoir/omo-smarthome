@@ -1,0 +1,97 @@
+Tick 0:
+                              
+-----------------------------------
+Tick 1:
+                              
+Device living room pc in Living Room is broken
+No one could handle the event: BrokenDeviceEvent caused by Device living room pc. Event remained in the queue.
+-----------------------------------
+Tick 2:
+                              
+Baby Inhabitant Lox, 1 is crying
+No one could handle the event: CryingBabyEvent caused by Inhabitant Lox, 1. Event remained in the queue.
+Lucy found manual for living room pc
+-----------------------------------
+Tick 3:
+                              
+Inhabitant John, 30 is attending to help Inhabitant Lox, 1
+-----------------------------------
+Tick 4:
+                              
+John comforted baby Lox
+-----------------------------------
+Tick 5:
+                              
+Device living room blinds in Living Room is broken
+No one could handle the event: BrokenDeviceEvent caused by Device living room blinds. Event remained in the queue.
+Lucy fixed device: living room pc
+-----------------------------------
+Tick 6:
+                              
+Device Bathroom Dehumidifier in Bathroom is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Bathroom Dehumidifier. Event remained in the queue.
+John fed baby Lox
+Baby Lox is not crying anymore
+Lucy found manual for living room blinds
+-----------------------------------
+Tick 7:
+                              
+John found manual for Bathroom Dehumidifier
+-----------------------------------
+Tick 8:
+                              
+Dog Buddy is seeking attention.
+No one could handle the event: DistressedPetEvent caused by Dog Buddy. Event remained in the queue.
+-----------------------------------
+Tick 9:
+                              
+Inhabitant Emily, 8 is attending to check Buddy
+Lucy fixed device: living room blinds
+-----------------------------------
+Tick 10:
+                              
+John fixed device: Bathroom Dehumidifier
+Emily comforted pet Buddy
+-----------------------------------
+Tick 11:
+                              
+-----------------------------------
+Tick 12:
+                              
+-----------------------------------
+Tick 13:
+                              
+-----------------------------------
+Tick 14:
+                              
+-----------------------------------
+Tick 15:
+                              
+Dog Buddy is seeking attention.
+No one could handle the event: DistressedPetEvent caused by Dog Buddy. Event remained in the queue.
+-----------------------------------
+Tick 16:
+                              
+Inhabitant Lucy, 30 is attending to check Dog Buddy
+Lucy comforted pet Buddy
+-----------------------------------
+Tick 17:
+                              
+Device LG AC in Living Room is broken
+Device Kitchen Lamp in Kitchen is broken
+John found manual for LG AC
+Lucy found manual for Kitchen Lamp
+-----------------------------------
+Tick 18:
+                              
+Baby Inhabitant Lox, 1 is crying
+No one could handle the event: CryingBabyEvent caused by Inhabitant Lox, 1. Event remained in the queue.
+-----------------------------------
+Tick 19:
+                              
+No one could handle the event: CryingBabyEvent caused by Inhabitant Lox, 1. Event remained in the queue.
+Dog Buddy is seeking attention.
+No one could handle the event: DistressedPetEvent caused by Dog Buddy. Event remained in the queue.
+Device Bathroom Dehumidifier in Bathroom is broken
+No one could handle the event: BrokenDeviceEvent caused by Device Bathroom Dehumidifier. Event remained in the queue.
+-----------------------------------

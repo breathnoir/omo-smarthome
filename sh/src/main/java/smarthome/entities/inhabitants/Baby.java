@@ -4,6 +4,7 @@ package smarthome.entities.inhabitants;
 import smarthome.entities.UsableObject;
 import smarthome.events.CryingBabyEvent;
 import smarthome.events.Event;
+import smarthome.reports.LoggerManager;
 
 import java.util.List;
 
@@ -16,7 +17,8 @@ public class Baby extends Inhabitant {
     }
 
     public CryingBabyEvent cry(){
-        System.out.println("Baby " + name + " is crying");
+//        System.out.println("Baby " + name + " is crying");
+        LoggerManager.eventLogger.info("Baby " + toString() + " is crying");
         isCrying = true;
         return new CryingBabyEvent(this);
     }

@@ -4,6 +4,7 @@ import smarthome.Simulation;
 import smarthome.entities.Room;
 import smarthome.entities.UsableObject;
 import smarthome.events.Event;
+import smarthome.reports.LoggerManager;
 import smarthome.task.Task;
 import smarthome.task.UseObjectTask;
 
@@ -34,7 +35,9 @@ public abstract class Inhabitant {
         } else if (next != null) {
             return next.handleEvent(event);
         } else {
-            System.out.println("No one could handle the event: " + event.getClass().getSimpleName() + ". Event remained in the queue.");
+//            System.out.println("No one could handle the event: " + event.getClass().getSimpleName() + ". Event remained in the queue.");
+            LoggerManager.eventLogger.info("No one could handle the event: " + event.getClass().getSimpleName()
+                    + " caused by " + event.getSource().toString() + ". Event remained in the queue.");
             return false;
         }
     }
@@ -94,5 +97,10 @@ public abstract class Inhabitant {
 
     public boolean isBusy(){
         return !taskQueue.isEmpty();
+    }
+
+    @Override
+    public String toString() {
+        return "Inhabitant " + name + ", " + age;
     }
 }

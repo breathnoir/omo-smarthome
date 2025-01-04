@@ -2,6 +2,7 @@ package smarthome.entities.devices.state;
 
 import smarthome.entities.devices.Device;
 import smarthome.events.BrokenDeviceEvent;
+import smarthome.reports.LoggerManager;
 
 public class OnState implements DeviceState{
     Device device;
@@ -17,6 +18,7 @@ public class OnState implements DeviceState{
         device.setState(device.getOffState());
         device.setUsingElectricity(false);
         System.out.println("device " + device.getName() + " is off");
+//        LoggerManager.eventLogger.info("Device " + device.getName() + " in " + device.getRoom() + " is off");
     }
 
     public void fix() {
@@ -28,7 +30,8 @@ public class OnState implements DeviceState{
         device.setState(device.getBrokenState());
         device.setUsingElectricity(false);
         BrokenDeviceEvent event = new BrokenDeviceEvent(device);
-        System.out.println(device.getName() + " is broken. ");
+//        System.out.println(device.getName() + " is broken. ");
+        LoggerManager.eventLogger.info("Device " + device.getName() + " in " + device.getRoom() + " is broken");
         return event;
     }
 }

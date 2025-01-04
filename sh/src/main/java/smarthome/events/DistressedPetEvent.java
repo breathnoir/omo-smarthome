@@ -15,6 +15,11 @@ public class DistressedPetEvent implements Event {
         return animal.getLocation();
     }
 
+    @Override
+    public Object getSource() {
+        return animal;
+    }
+
     public Animal getAnimal() {
         return animal;
     }

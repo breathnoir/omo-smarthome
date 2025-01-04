@@ -11,6 +11,7 @@ import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.entities.sensors.Sensor;
 import smarthome.events.*;
 import smarthome.reports.ConsumptionReport;
+import smarthome.reports.LoggerManager;
 import smarthome.reports.Visitor;
 import smarthome.task.WanderAroundTheHouseTask;
 
@@ -48,6 +49,8 @@ public final class Simulation {
 
         for (int tick = 0; tick < TICS; tick++) {
             System.out.println("Tick " + tick);
+            LoggerManager.eventLogger.info(String.format("Tick %d:", tick));
+            LoggerManager.eventLogger.info("                              ");
 
 
             // Process events in the queue without modifying it directly to avoid ConcurrentModificationException
@@ -60,12 +63,11 @@ public final class Simulation {
                     eventQueue.add(event);
                 }
             }
-
-            generateDeviceBreakdown(devices);
-
             generateCryingBabies(inhabitants);
 
             generatePetEvents(inhabitants);
+
+            generateDeviceBreakdown(devices);
 
             for (Inhabitant inhabitant : inhabitants){
                 if (!inhabitant.isBusy()) inhabitant.useAvailableObject(getUsableObjects());
@@ -80,6 +82,7 @@ public final class Simulation {
 
             devices.forEach(Device::useElectricity);
 
+            LoggerManager.eventLogger.info("-----------------------------------");
         }
 
         Visitor report = new ConsumptionReport();

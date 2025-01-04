@@ -111,4 +111,8 @@ public class Device implements HouseComponent {
         return state.breakDevice();
     }
 
+    @Override
+    public String toString() {
+        return "Device " + name;
+    }
 }
