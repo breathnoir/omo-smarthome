@@ -9,6 +9,7 @@ public class LoggerManager {
 
     public static final Logger consumptionLogger = Logger.getLogger("ConsumptionLogger");
     public static final Logger eventLogger = Logger.getLogger("EventLogger");
+    public static final Logger activityLogger = Logger.getLogger("ActivityLogger");
 
     static {
         try {
@@ -21,6 +22,11 @@ public class LoggerManager {
             eventFileHandler.setFormatter(new CustomFormatter());
             eventLogger.addHandler(eventFileHandler);
             eventLogger.setLevel(Level.INFO);
+
+            FileHandler activityFileHandler = new FileHandler("reports/activity_report.txt", false);
+            activityFileHandler.setFormatter(new CustomFormatter());
+            activityLogger.addHandler(activityFileHandler);
+            activityLogger.setLevel(Level.INFO);
 
         } catch (IOException e) {
             System.err.println("Failed to initialize loggers: " + e.getMessage());

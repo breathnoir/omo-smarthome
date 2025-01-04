@@ -63,7 +63,8 @@ public abstract class Inhabitant {
                     return;
                 }
             }
-            System.out.println(name + " is waiting as no UsableObjects are available.");
+//            System.out.println(name + " is waiting as no UsableObjects are available.");
+            LoggerManager.activityLogger.info(name + " is waiting as no UsableObjects are available.");
         }
     }
 
@@ -83,10 +84,12 @@ public abstract class Inhabitant {
         room = nextRoom;
         if (nextRoom != null) {
             nextRoom.addInhabitants(this);
-            System.out.println(name + " moved to " + nextRoom.getName());
+//            System.out.println(name + " moved to " + nextRoom.getName());
+            LoggerManager.activityLogger.info(name + " moved to " + nextRoom.getName());
             isHome = true;
         } else {
-            System.out.println(name + " is not home.");
+//            System.out.println(name + " is not home.");
+            LoggerManager.activityLogger.info(name + " is not home.");
             isHome = false;
         }
     }

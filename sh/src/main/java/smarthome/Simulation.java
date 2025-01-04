@@ -51,7 +51,8 @@ public final class Simulation {
             System.out.println("Tick " + tick);
             LoggerManager.eventLogger.info(String.format("Tick %d:", tick));
             LoggerManager.eventLogger.info("                              ");
-
+            LoggerManager.activityLogger.info(String.format("Tick %d:", tick));
+            LoggerManager.activityLogger.info("                              ");
 
             // Process events in the queue without modifying it directly to avoid ConcurrentModificationException
             Queue<Event> currentEvents = new LinkedList<>(eventQueue);
@@ -83,6 +84,7 @@ public final class Simulation {
             devices.forEach(Device::useElectricity);
 
             LoggerManager.eventLogger.info("-----------------------------------");
+            LoggerManager.activityLogger.info("-----------------------------------");
         }
 
         Visitor report = new ConsumptionReport();
@@ -170,8 +172,10 @@ public final class Simulation {
                         eventQueue.add(newEvent);
                         EventBus.getInstance().publishEvent(newEvent);
                     } else {
-                        List<Room> rooms = getRooms();
-                        animal.assignTask(new WanderAroundTheHouseTask(animal, rooms.get(random.nextInt(rooms.size()))));
+                        if (random.nextDouble() < 0.7) {
+                            List<Room> rooms = getRooms();
+                            animal.assignTask(new WanderAroundTheHouseTask(animal, rooms.get(random.nextInt(rooms.size()))));
+                        }
                     }
                 }
             }
