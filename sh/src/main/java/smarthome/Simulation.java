@@ -10,6 +10,9 @@ import smarthome.entities.inhabitants.Baby;
 import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.entities.sensors.Sensor;
 import smarthome.events.*;
+import smarthome.reports.ConsumptionReport;
+import smarthome.reports.LoggerManager;
+import smarthome.reports.Visitor;
 import smarthome.task.WanderAroundTheHouseTask;
 
 import java.util.LinkedList;
@@ -35,7 +38,7 @@ public final class Simulation {
 
     public void run() {
         if (house == null) {
-            System.out.println("House is null!");
+            System.err.println("House is null!");
             return;
         }
 
@@ -45,8 +48,7 @@ public final class Simulation {
         List<Inhabitant> inhabitants = getInhabitants();
 
         for (int tick = 0; tick < TICS; tick++) {
-            System.out.println("Tick " + tick);
-
+            printTicks(tick);
 
             // Process events in the queue without modifying it directly to avoid ConcurrentModificationException
             Queue<Event> currentEvents = new LinkedList<>(eventQueue);
@@ -58,12 +60,11 @@ public final class Simulation {
                     eventQueue.add(event);
                 }
             }
-
-            generateDeviceBreakdown(devices);
-
             generateCryingBabies(inhabitants);
 
             generatePetEvents(inhabitants);
+
+            generateDeviceBreakdown(devices);
 
             for (Inhabitant inhabitant : inhabitants){
                 if (!inhabitant.isBusy()) inhabitant.useAvailableObject(getUsableObjects());
@@ -78,10 +79,12 @@ public final class Simulation {
 
             devices.forEach(Device::useElectricity);
 
+            printSeparators();
         }
 
         Visitor report = new ConsumptionReport();
         house.acceptVisitor(report);
+        ConsumptionReport.getTotalUsage();
     }
 
     public void setHouse(House house) {
@@ -118,8 +121,12 @@ public final class Simulation {
     public void updateRoomStats(Room room) {
 
         for (Sensor sensor: room.getSensors()) sensor.updateStat();
-        System.out.printf("Room Stats Updated: Temperature = %.1f, Humidity = %.1f, WindSpeed = %.1f, Lightning = %.1f for room %s%n",
-                room.getTemperature(), room.getHumidity(), room.getWindSpeed(), room.getLightning(), room.getName());
+//        System.out.printf("Room Stats Updated: Temperature = %.1f, Humidity = %.1f, WindSpeed = %.1f, Lightning = %.1f for room %s%n",
+//                room.getTemperature(), room.getHumidity(), room.getWindSpeed(), room.getLightning(), room.getName());
+        LoggerManager.sensorLogger.info(String.format(
+                "   >%s Stats Updated: Temperature = %.1f, Humidity = %.1f, WindSpeed = %.1f, Lightning = %.1f",
+                room.getName(), room.getTemperature(), room.getHumidity(), room.getWindSpeed(), room.getLightning()));
+
     }
 
     public void registerChains(){
@@ -164,11 +171,30 @@ public final class Simulation {
                         eventQueue.add(newEvent);
                         EventBus.getInstance().publishEvent(newEvent);
                     } else {
-                        List<Room> rooms = getRooms();
-                        animal.assignTask(new WanderAroundTheHouseTask(animal, rooms.get(random.nextInt(rooms.size()))));
+                        if (random.nextDouble() < 0.7) {
+                            List<Room> rooms = getRooms();
+                            animal.assignTask(new WanderAroundTheHouseTask(animal, rooms.get(random.nextInt(rooms.size()))));
+                        }
                     }
                 }
             }
         }
+    }
+
+    public void printTicks(int tick) {
+        System.out.println("Tick " + tick);
+        LoggerManager.eventLogger.info(String.format("Tick %d:", tick));
+        LoggerManager.eventLogger.info("                              ");
+        LoggerManager.activityLogger.info(String.format("Tick %d:", tick));
+        LoggerManager.activityLogger.info("                              ");
+        LoggerManager.sensorLogger.info(String.format("Tick %d:", tick));
+        LoggerManager.sensorLogger.info("                              ");
+    }
+
+    public void printSeparators() {
+        System.out.println("-----------------------------------");
+        LoggerManager.eventLogger.info("-----------------------------------");
+        LoggerManager.activityLogger.info("-----------------------------------");
+        LoggerManager.sensorLogger.info("-----------------------------------");
     }
 }

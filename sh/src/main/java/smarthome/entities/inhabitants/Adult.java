@@ -4,6 +4,7 @@ import smarthome.events.BrokenDeviceEvent;
 import smarthome.events.CryingBabyEvent;
 import smarthome.events.DistressedPetEvent;
 import smarthome.events.Event;
+import smarthome.reports.LoggerManager;
 import smarthome.task.*;
 
 public class Adult extends Inhabitant {
@@ -20,19 +21,25 @@ public class Adult extends Inhabitant {
     @Override
     public void processEvent(Event event) {
         if (event instanceof BrokenDeviceEvent brokenDeviceEvent) {
-            System.out.println(name + " is attending to fix device: " + brokenDeviceEvent.getDevice().getName());
+//            System.out.println(name + " is attending to fix device: " + brokenDeviceEvent.getDevice().getName());
+            LoggerManager.eventLogger.info(toString() + " is attending to fix device: " + brokenDeviceEvent.getDevice().getName());
+
             Task newTask = new FindManualTask(brokenDeviceEvent.getDevice(), this);
             assignTask(newTask);
             moveTo(newTask.getLocation());
             assignTask(new FixDeviceTask(brokenDeviceEvent.getDevice(), this));
 
         } else if (event instanceof DistressedPetEvent distressedPetEvent) {
-            System.out.println(name + " is attending to check " + distressedPetEvent.getAnimal().name);
+//            System.out.println(name + " is attending to check " + distressedPetEvent.getAnimal().name);
+            LoggerManager.eventLogger.info(toString() + " is attending to check " + distressedPetEvent.getAnimal().toString());
+
             Task newTask = new ComfortPetTask(distressedPetEvent.getAnimal(), 1,this);
             assignTask(newTask);
             moveTo(newTask.getLocation());
         } else if (event instanceof CryingBabyEvent cryingBabyEvent) {
-            System.out.println(name + " is attending to help " + cryingBabyEvent.getBaby().name);
+//            System.out.println(name + " is attending to help " + cryingBabyEvent.getBaby().name);
+            LoggerManager.eventLogger.info(toString() + " is attending to help " + cryingBabyEvent.getBaby().toString());
+
             Task newTask = new ComfortBabyTask(cryingBabyEvent.getBaby(), this);
             assignTask(newTask);
             moveTo(newTask.getLocation());

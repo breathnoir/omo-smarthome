@@ -4,6 +4,7 @@ import smarthome.Simulation;
 import smarthome.entities.Room;
 import smarthome.entities.UsableObject;
 import smarthome.events.Event;
+import smarthome.reports.LoggerManager;
 import smarthome.task.Task;
 import smarthome.task.UseObjectTask;
 
@@ -34,7 +35,9 @@ public abstract class Inhabitant {
         } else if (next != null) {
             return next.handleEvent(event);
         } else {
-            System.out.println("No one could handle the event: " + event.getClass().getSimpleName() + ". Event remained in the queue.");
+//            System.out.println("No one could handle the event: " + event.getClass().getSimpleName() + ". Event remained in the queue.");
+            LoggerManager.eventLogger.info("No one could handle the event: " + event.getClass().getSimpleName()
+                    + " caused by " + event.getSource().toString() + ". Event remained in the queue.");
             return false;
         }
     }
@@ -60,7 +63,8 @@ public abstract class Inhabitant {
                     return;
                 }
             }
-            System.out.println(name + " is waiting as no UsableObjects are available.");
+//            System.out.println(name + " is waiting as no UsableObjects are available.");
+            LoggerManager.activityLogger.info(name + " is waiting as no UsableObjects are available.");
         }
     }
 
@@ -80,10 +84,14 @@ public abstract class Inhabitant {
         room = nextRoom;
         if (nextRoom != null) {
             nextRoom.addInhabitants(this);
-            System.out.println(name + " moved to " + nextRoom.getName());
+//            System.out.println(name + " moved to " + nextRoom.getName());
+            LoggerManager.activityLogger.info(name + " moved to " + nextRoom.getName());
+            LoggerManager.sensorLogger.info(name + " moved to " + nextRoom.getName());
+
             isHome = true;
         } else {
-            System.out.println(name + " is not home.");
+//            System.out.println(name + " is not home.");
+            LoggerManager.activityLogger.info(name + " is not home.");
             isHome = false;
         }
     }
@@ -94,5 +102,10 @@ public abstract class Inhabitant {
 
     public boolean isBusy(){
         return !taskQueue.isEmpty();
+    }
+
+    @Override
+    public String toString() {
+        return "Inhabitant " + name + ", " + age;
     }
 }

@@ -15,6 +15,11 @@ public class CryingBabyEvent implements Event {
         return baby.getLocation();
     }
 
+    @Override
+    public Object getSource() {
+        return baby;
+    }
+
     public Baby getBaby() {
         return baby;
     }

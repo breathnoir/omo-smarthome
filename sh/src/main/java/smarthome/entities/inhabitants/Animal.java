@@ -3,6 +3,7 @@ package smarthome.entities.inhabitants;
 import smarthome.entities.UsableObject;
 import smarthome.events.DistressedPetEvent;
 import smarthome.events.Event;
+import smarthome.reports.LoggerManager;
 
 import java.util.List;
 
@@ -18,7 +19,8 @@ public class Animal extends Inhabitant {
 
     public DistressedPetEvent seekAttention() {
         isDistressed = true;
-        System.out.println(species + " " + name + " is seeking attention.");
+//        System.out.println(species + " " + name + " is seeking attention.");
+        LoggerManager.eventLogger.info(toString() + " is seeking attention.");
         return new DistressedPetEvent(this);
     }
 
@@ -42,4 +44,9 @@ public class Animal extends Inhabitant {
 
     @Override
     public void useAvailableObject(List<UsableObject> usableObjects){}
+
+    @Override
+    public String toString() {
+        return species + ' ' + name;
+    }
 }

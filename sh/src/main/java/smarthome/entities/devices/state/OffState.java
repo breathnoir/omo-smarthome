@@ -1,7 +1,9 @@
 package smarthome.entities.devices.state;
 
+import smarthome.entities.UsableObject;
 import smarthome.entities.devices.Device;
 import smarthome.events.BrokenDeviceEvent;
+import smarthome.reports.LoggerManager;
 
 public class OffState implements DeviceState{
     Device device;
@@ -11,7 +13,10 @@ public class OffState implements DeviceState{
     }
     public void enable() {
         device.setState(device.getOnState());
-        System.out.println("device " + device.getName() + " is on");
+//        System.out.println("device " + device.getName() + " is on");
+        if (!(device instanceof UsableObject)) {
+            LoggerManager.sensorLogger.info("Device " + device.getName() + " in " + device.getRoom() + " is on");
+        }
         device.setUsingElectricity(true);
     }
 
@@ -27,7 +32,13 @@ public class OffState implements DeviceState{
     public BrokenDeviceEvent breakDevice() {
         device.setState(device.getBrokenState());
         BrokenDeviceEvent event = new BrokenDeviceEvent(device);
-        System.out.println(device.getName() + " is broken. ");
+//        System.out.println(device.getName() + " is broken. ");
+        LoggerManager.eventLogger.info("Device " + device.getName() + " in " + device.getRoom() + " is broken");
+
+        if (!(device instanceof UsableObject)) {
+            LoggerManager.sensorLogger.info("Device " + device.getName() + " in " + device.getRoom() + " is broken");
+        }
+
         return event;
     }
 }

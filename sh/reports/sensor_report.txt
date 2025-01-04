@@ -1,0 +1,231 @@
+Tick 0:
+                              
+John moved to Living Room
+Lucy moved to Living Room
+Emily moved to Kitchen
+Buddy moved to Kitchen
+   >Living Room Stats Updated: Temperature = 31.3, Humidity = 50.0, WindSpeed = 8.3, Lightning = 605.4
+Device LG AC in Living Room is on
+Device Smart Lamp in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 30.8, WindSpeed = 0.0, Lightning = 592.7
+Device Kitchen Lamp in Kitchen is on
+   >Master Bedroom Stats Updated: Temperature = 18.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 737.1
+Device Bedroom Heater in Master Bedroom is on
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 50.2, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 1:
+                              
+Device living room blinds in Living Room is broken
+Buddy moved to Master Bedroom
+   >Living Room Stats Updated: Temperature = 25.3, Humidity = 50.0, WindSpeed = 32.1, Lightning = 414.4
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 32.0, WindSpeed = 0.0, Lightning = 701.9
+Device Kitchen Lamp in Kitchen is off
+   >Master Bedroom Stats Updated: Temperature = 29.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 494.4
+Device Bedroom Heater in Master Bedroom is off
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 58.2, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 2:
+                              
+Buddy moved to Kitchen
+   >Living Room Stats Updated: Temperature = 23.8, Humidity = 50.0, WindSpeed = 25.3, Lightning = 748.3
+Device LG AC in Living Room is off
+Device Smart Lamp in Living Room is off
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 49.5, WindSpeed = 0.0, Lightning = 721.7
+   >Master Bedroom Stats Updated: Temperature = 15.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 545.3
+Device Bedroom Heater in Master Bedroom is on
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 57.2, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 3:
+                              
+John moved to Living Room
+Device Bedroom Heater in Master Bedroom is broken
+Lucy moved to Master Bedroom
+Device Bathroom Dehumidifier in Bathroom is broken
+Emily moved to Living Room
+Buddy moved to Living Room
+   >Living Room Stats Updated: Temperature = 32.8, Humidity = 50.0, WindSpeed = 49.6, Lightning = 625.2
+Device LG AC in Living Room is on
+Device Smart Lamp in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 27.2, WindSpeed = 0.0, Lightning = 767.7
+Device Kitchen Humidifier in Kitchen is on
+   >Master Bedroom Stats Updated: Temperature = 32.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 415.5
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 73.6, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 4:
+                              
+   >Living Room Stats Updated: Temperature = 16.3, Humidity = 50.0, WindSpeed = 8.6, Lightning = 447.2
+Device Xiaomi heater in Living Room is on
+Device LG AC in Living Room is off
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 26.0, WindSpeed = 0.0, Lightning = 682.4
+   >Master Bedroom Stats Updated: Temperature = 33.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 542.5
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 31.4, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 5:
+                              
+Device Smart Lamp in Living Room is broken
+   >Living Room Stats Updated: Temperature = 27.0, Humidity = 50.0, WindSpeed = 35.0, Lightning = 579.3
+Device Xiaomi heater in Living Room is off
+Device LG AC in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 63.2, WindSpeed = 0.0, Lightning = 658.8
+   >Master Bedroom Stats Updated: Temperature = 20.9, Humidity = 50.0, WindSpeed = 0.0, Lightning = 551.5
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 60.1, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 6:
+                              
+Emily moved to Living Room
+Buddy moved to Bathroom
+   >Living Room Stats Updated: Temperature = 29.5, Humidity = 50.0, WindSpeed = 37.5, Lightning = 723.9
+Device living room blinds in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 73.0, WindSpeed = 0.0, Lightning = 436.7
+   >Master Bedroom Stats Updated: Temperature = 22.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 482.7
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 32.0, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 7:
+                              
+John moved to Bathroom
+Lucy moved to Living Room
+   >Living Room Stats Updated: Temperature = 20.1, Humidity = 50.0, WindSpeed = 45.6, Lightning = 760.3
+Device LG AC in Living Room is off
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 72.9, WindSpeed = 0.0, Lightning = 690.4
+   >Master Bedroom Stats Updated: Temperature = 22.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 638.7
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 74.2, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 8:
+                              
+Device Bedroom Heater in Master Bedroom is broken
+   >Living Room Stats Updated: Temperature = 15.2, Humidity = 50.0, WindSpeed = 41.3, Lightning = 460.7
+Device Xiaomi heater in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 70.7, WindSpeed = 0.0, Lightning = 553.0
+   >Master Bedroom Stats Updated: Temperature = 25.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 674.7
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 51.8, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 9:
+                              
+Emily moved to Bathroom
+   >Living Room Stats Updated: Temperature = 30.9, Humidity = 50.0, WindSpeed = 8.0, Lightning = 544.4
+Device Xiaomi heater in Living Room is off
+Device LG AC in Living Room is on
+Device living room blinds in Living Room is off
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 69.5, WindSpeed = 0.0, Lightning = 772.9
+   >Master Bedroom Stats Updated: Temperature = 16.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 784.4
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 62.5, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 10:
+                              
+   >Living Room Stats Updated: Temperature = 18.5, Humidity = 50.0, WindSpeed = 24.5, Lightning = 739.0
+Device Xiaomi heater in Living Room is on
+Device LG AC in Living Room is off
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 39.8, WindSpeed = 0.0, Lightning = 734.0
+Device Kitchen Humidifier in Kitchen is off
+   >Master Bedroom Stats Updated: Temperature = 22.9, Humidity = 50.0, WindSpeed = 0.0, Lightning = 747.1
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 66.4, WindSpeed = 0.0, Lightning = 700.0
+Device Bathroom Dehumidifier in Bathroom is on
+-----------------------------------
+Tick 11:
+                              
+John moved to Master Bedroom
+Device Bedroom Blinds in Master Bedroom is broken
+Lucy moved to Master Bedroom
+Emily moved to Living Room
+Buddy moved to Kitchen
+   >Living Room Stats Updated: Temperature = 27.8, Humidity = 50.0, WindSpeed = 28.0, Lightning = 590.8
+Device Xiaomi heater in Living Room is off
+Device LG AC in Living Room is on
+Device Smart Lamp in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 59.5, WindSpeed = 0.0, Lightning = 665.4
+   >Master Bedroom Stats Updated: Temperature = 16.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 680.6
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 28.2, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 12:
+                              
+   >Living Room Stats Updated: Temperature = 31.3, Humidity = 50.0, WindSpeed = 44.5, Lightning = 465.5
+Device living room blinds in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 31.9, WindSpeed = 0.0, Lightning = 522.9
+Device Kitchen Lamp in Kitchen is on
+   >Master Bedroom Stats Updated: Temperature = 21.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 522.5
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 58.7, WindSpeed = 0.0, Lightning = 700.0
+Device Bathroom Dehumidifier in Bathroom is off
+-----------------------------------
+Tick 13:
+                              
+   >Living Room Stats Updated: Temperature = 19.2, Humidity = 50.0, WindSpeed = 17.7, Lightning = 742.4
+Device Xiaomi heater in Living Room is on
+Device LG AC in Living Room is off
+Device living room blinds in Living Room is off
+Device Smart Lamp in Living Room is off
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 50.8, WindSpeed = 0.0, Lightning = 643.3
+   >Master Bedroom Stats Updated: Temperature = 31.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 571.4
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 35.9, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 14:
+                              
+Emily moved to Kitchen
+Device Smart Lamp in Living Room is broken
+   >Living Room Stats Updated: Temperature = 17.6, Humidity = 50.0, WindSpeed = 33.3, Lightning = 565.7
+Device living room blinds in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 29.0, WindSpeed = 0.0, Lightning = 654.4
+Device Kitchen Humidifier in Kitchen is on
+Device Kitchen Lamp in Kitchen is off
+   >Master Bedroom Stats Updated: Temperature = 26.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 590.8
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 52.6, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 15:
+                              
+Lucy moved to Living Room
+   >Living Room Stats Updated: Temperature = 23.1, Humidity = 50.0, WindSpeed = 6.0, Lightning = 729.5
+Device Xiaomi heater in Living Room is off
+Device living room blinds in Living Room is off
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 72.5, WindSpeed = 0.0, Lightning = 718.0
+   >Master Bedroom Stats Updated: Temperature = 34.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 587.1
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 38.9, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 16:
+                              
+Device Kitchen Humidifier in Kitchen is broken
+Emily moved to Living Room
+Buddy moved to Living Room
+   >Living Room Stats Updated: Temperature = 19.1, Humidity = 50.0, WindSpeed = 30.3, Lightning = 727.9
+Device Xiaomi heater in Living Room is on
+Device living room blinds in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 40.7, WindSpeed = 0.0, Lightning = 798.4
+   >Master Bedroom Stats Updated: Temperature = 20.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 415.3
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 55.2, WindSpeed = 0.0, Lightning = 700.0
+-----------------------------------
+Tick 17:
+                              
+   >Living Room Stats Updated: Temperature = 28.9, Humidity = 50.0, WindSpeed = 16.8, Lightning = 473.0
+Device Xiaomi heater in Living Room is off
+Device LG AC in Living Room is on
+Device living room blinds in Living Room is off
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 66.5, WindSpeed = 0.0, Lightning = 748.4
+   >Master Bedroom Stats Updated: Temperature = 33.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 482.5
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 68.6, WindSpeed = 0.0, Lightning = 700.0
+Device Bathroom Dehumidifier in Bathroom is on
+-----------------------------------
+Tick 18:
+                              
+Buddy moved to Living Room
+   >Living Room Stats Updated: Temperature = 16.1, Humidity = 50.0, WindSpeed = 42.3, Lightning = 720.6
+Device Xiaomi heater in Living Room is on
+Device LG AC in Living Room is off
+Device living room blinds in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 44.6, WindSpeed = 0.0, Lightning = 787.0
+   >Master Bedroom Stats Updated: Temperature = 25.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 637.2
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 43.7, WindSpeed = 0.0, Lightning = 700.0
+Device Bathroom Dehumidifier in Bathroom is off
+-----------------------------------
+Tick 19:
+                              
+John moved to Kitchen
+Device Xiaomi heater in Living Room is broken
+Lucy moved to Living Room
+Emily moved to Living Room
+Buddy moved to Living Room
+   >Living Room Stats Updated: Temperature = 23.7, Humidity = 50.0, WindSpeed = 41.2, Lightning = 606.7
+Device Smart Lamp in Living Room is on
+   >Kitchen Stats Updated: Temperature = 22.0, Humidity = 60.5, WindSpeed = 0.0, Lightning = 549.7
+Device Kitchen Lamp in Kitchen is on
+   >Master Bedroom Stats Updated: Temperature = 25.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 514.7
+   >Bathroom Stats Updated: Temperature = 22.0, Humidity = 68.4, WindSpeed = 0.0, Lightning = 700.0
+Device Bathroom Dehumidifier in Bathroom is on
+-----------------------------------

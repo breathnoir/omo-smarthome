@@ -1,6 +1,7 @@
 package smarthome.events;
 
 import smarthome.entities.inhabitants.Inhabitant;
+import smarthome.reports.LoggerManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +27,8 @@ public class EventBus {
         if (chain != null) {
             return chain.handleEvent(event); // pass the event to the chain
         } else {
-            System.out.println("No handlers available for event type: " + event.getClass().getSimpleName());
+            System.err.println("No handlers available for event type: " + event.getClass().getSimpleName());
+            LoggerManager.eventLogger.info("No handlers available for event type: " + event.getClass().getSimpleName());
             return false;
         }
     }

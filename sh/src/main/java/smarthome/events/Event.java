@@ -4,4 +4,5 @@ import smarthome.entities.Room;
 
 public interface Event {
     Room getLocation();
+    Object getSource();
 }

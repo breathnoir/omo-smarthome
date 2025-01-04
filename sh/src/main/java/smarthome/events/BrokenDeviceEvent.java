@@ -15,6 +15,11 @@ public class BrokenDeviceEvent implements Event {
         return device.getRoom();
     }
 
+    @Override
+    public Object getSource() {
+        return device;
+    }
+
     public Device getDevice() {
         return device;
     }

@@ -1,0 +1,106 @@
+Tick 0:
+                              
+John moved to Living Room
+John is using Philips tv
+Lucy moved to Living Room
+Lucy is using living room pc
+Emily moved to Kitchen
+Emily is using Panasonic Microwave
+Buddy moved to Kitchen
+-----------------------------------
+Tick 1:
+                              
+-----------------------------------
+Tick 2:
+                              
+John has stopped using Philips tv
+Lucy has stopped using living room pc
+Emily has stopped using Panasonic Microwave
+Buddy moved to Living Room
+-----------------------------------
+Tick 3:
+                              
+John moved to Bathroom
+Lucy is not home.
+Emily moved to Living Room
+-----------------------------------
+Tick 4:
+                              
+-----------------------------------
+Tick 5:
+                              
+Emily moved to Living Room
+Emily is using Philips tv
+Buddy moved to Living Room
+-----------------------------------
+Tick 6:
+                              
+-----------------------------------
+Tick 7:
+                              
+John moved to Kitchen
+Lucy moved to Living Room
+Lucy is using living room pc
+Emily has stopped using Philips tv
+Buddy moved to Living Room
+-----------------------------------
+Tick 8:
+                              
+Emily moved to Living Room
+-----------------------------------
+Tick 9:
+                              
+Lucy has stopped using living room pc
+-----------------------------------
+Tick 10:
+                              
+Lucy is not home.
+Emily moved to Living Room
+Emily is using Philips tv
+Buddy moved to Kitchen
+-----------------------------------
+Tick 11:
+                              
+John moved to Kitchen
+-----------------------------------
+Tick 12:
+                              
+Emily has stopped using Philips tv
+Buddy moved to Kitchen
+-----------------------------------
+Tick 13:
+                              
+Emily moved to Living Room
+Emily is using Philips tv
+Buddy moved to Master Bedroom
+-----------------------------------
+Tick 14:
+                              
+Lucy moved to Living Room
+Buddy moved to Master Bedroom
+-----------------------------------
+Tick 15:
+                              
+John moved to Kitchen
+Emily has stopped using Philips tv
+-----------------------------------
+Tick 16:
+                              
+Emily moved to Living Room
+Emily is using Philips tv
+-----------------------------------
+Tick 17:
+                              
+-----------------------------------
+Tick 18:
+                              
+Lucy moved to Master Bedroom
+Emily has stopped using Philips tv
+Buddy moved to Bathroom
+-----------------------------------
+Tick 19:
+                              
+John moved to Kitchen
+Emily moved to Living Room
+Emily is using Philips tv
+-----------------------------------
