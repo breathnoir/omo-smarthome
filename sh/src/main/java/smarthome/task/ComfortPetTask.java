@@ -6,12 +6,13 @@ import smarthome.entities.inhabitants.Inhabitant;
 public class ComfortPetTask extends Task {
     private final Animal pet;
     public ComfortPetTask(Animal pet, int duration, Inhabitant assignee) {
-        super(duration, assignee);
+        super(duration, assignee, pet.getLocation());
         this.pet = pet;
     }
 
     @Override
     public void execute() {
+        pet.setDistressed(false);
         System.out.println(assignee.name + " comforted pet " + pet.name);
     }
 }

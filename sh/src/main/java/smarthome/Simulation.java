@@ -3,12 +3,14 @@ package smarthome;
 import smarthome.config.ChainBuilder;
 import smarthome.entities.House;
 import smarthome.entities.Room;
+import smarthome.entities.UsableObject;
 import smarthome.entities.devices.Device;
 import smarthome.entities.inhabitants.Animal;
 import smarthome.entities.inhabitants.Baby;
 import smarthome.entities.inhabitants.Inhabitant;
 import smarthome.entities.sensors.Sensor;
 import smarthome.events.*;
+import smarthome.task.WanderAroundTheHouseTask;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -39,6 +41,9 @@ public final class Simulation {
 
         registerChains();
 
+        List<Device> devices = getDevices();
+        List<Inhabitant> inhabitants = getInhabitants();
+
         for (int tick = 0; tick < TICS; tick++) {
             System.out.println("Tick " + tick);
 
@@ -49,21 +54,29 @@ public final class Simulation {
 
             // Publish unhandled events
             for (Event event : currentEvents) {
-                EventBus.getInstance().publishEvent(event); // Safely process events
+                if (!EventBus.getInstance().publishEvent(event)){
+                    eventQueue.add(event);
+                }
             }
 
-            generateDeviceBreakdown();
+            generateDeviceBreakdown(devices);
 
-//            generateCryingBabies();
+            generateCryingBabies(inhabitants);
 
-//            generatePetEvents();
+            generatePetEvents(inhabitants);
 
-            getInhabitants().forEach(Inhabitant::progressTask);
+            for (Inhabitant inhabitant : inhabitants){
+                if (!inhabitant.isBusy()) inhabitant.useAvailableObject(getUsableObjects());
+            }
+
+            inhabitants.forEach(Inhabitant::progressTask);
 
             getRooms().forEach(room -> {
-                this.updateRoomStats(room);
+                updateRoomStats(room);
                 room.notifyObservers();
             });
+
+            devices.forEach(Device::useElectricity);
 
         }
 
@@ -83,6 +96,14 @@ public final class Simulation {
         return house.getAllFloors().stream()
                 .flatMap(floor -> floor.getAllRooms().stream()
                         .flatMap(room -> room.getAllDevices().stream())).toList();
+    }
+
+    public List<UsableObject> getUsableObjects() {
+        List<UsableObject> allObjects = new java.util.ArrayList<>(getDevices().stream()
+                .filter(device -> device instanceof UsableObject && !device.isBroken()).map(device -> (UsableObject) device).toList());
+        allObjects.addAll( house.getEquipment().stream()
+                .filter(eq -> eq instanceof UsableObject).map(eq -> (UsableObject) eq).toList());
+        return allObjects;
     }
 
     public List<Room> getRooms(){
@@ -108,10 +129,9 @@ public final class Simulation {
         EventBus.getInstance().registerChain(CryingBabyEvent.class, chain);
     }
 
-    public void generateDeviceBreakdown(){
-        List<Device> devices = getDevices();
+    public void generateDeviceBreakdown(List<Device> devices){
         for (Device device : devices) {
-            if (random.nextDouble() < 0.1) {
+            if (random.nextDouble() < 0.03 && !device.isBroken()) {
                 Event newEvent = device.breakDevice();
                 if (newEvent != null) {
                     eventQueue.add(newEvent);
@@ -121,13 +141,12 @@ public final class Simulation {
         }
     }
 
-    public void generateCryingBabies() {
-        List<Inhabitant> inhabitants = getInhabitants();
-        for (Inhabitant baby: inhabitants) {
-            if (baby instanceof Baby) {
-                if (!((Baby) baby).isCrying()) {
+    public void generateCryingBabies(List<Inhabitant> inhabitants) {
+        for (Inhabitant inhabitant: inhabitants) {
+            if (inhabitant instanceof Baby baby) {
+                if (!baby.isCrying()) {
                     if (random.nextDouble() < 0.1) {
-                        Event newEvent = ((Baby) baby).cry();
+                        Event newEvent = baby.cry();
                         eventQueue.add(newEvent);
                         EventBus.getInstance().publishEvent(newEvent);
                     }
@@ -136,15 +155,17 @@ public final class Simulation {
         }
     }
 
-    public void generatePetEvents() {
-        List<Inhabitant> inhabitants = getInhabitants();
-        for (Inhabitant animal : inhabitants) {
-            if (animal instanceof Animal) {
-                if (!((Animal) animal).isDistressed()) {
+    public void generatePetEvents(List<Inhabitant> inhabitants) {
+        for (Inhabitant inhabitant : inhabitants) {
+            if (inhabitant instanceof Animal animal) {
+                if (!animal.isDistressed()) {
                     if (random.nextDouble() < 0.1) {
-                        Event newEvent = ((Animal) animal).seekAttention();
+                        Event newEvent = animal.seekAttention();
                         eventQueue.add(newEvent);
                         EventBus.getInstance().publishEvent(newEvent);
+                    } else {
+                        List<Room> rooms = getRooms();
+                        animal.assignTask(new WanderAroundTheHouseTask(animal, rooms.get(random.nextInt(rooms.size()))));
                     }
                 }
             }

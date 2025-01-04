@@ -1,5 +1,7 @@
 package smarthome.events;
 
+import smarthome.entities.Room;
+
 public interface Event {
-    String getLocation();
+    Room getLocation();
 }

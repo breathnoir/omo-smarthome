@@ -10,11 +10,12 @@ public class OnState implements DeviceState{
         this.device = device;
     }
     public void enable() {
-        device.useElectricity();
+        device.setUsingElectricity(true);
     }
 
     public void disable() {
         device.setState(device.getOffState());
+        device.setUsingElectricity(false);
         System.out.println("device " + device.getName() + " is off");
     }
 
@@ -25,8 +26,9 @@ public class OnState implements DeviceState{
     @Override
     public BrokenDeviceEvent breakDevice() {
         device.setState(device.getBrokenState());
-        System.out.println(device.getName() + " is broken.");
+        device.setUsingElectricity(false);
         BrokenDeviceEvent event = new BrokenDeviceEvent(device);
+        System.out.println(device.getName() + " is broken. ");
         return event;
     }
 }

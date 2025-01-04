@@ -54,6 +54,9 @@ public class House implements HouseComponent {
         return floors.stream().map(Floor.class::cast).collect(Collectors.toList());
     }
 
+    public List<Equipment> getEquipment() {
+        return equipment;
+    }
 
     @Override
     public void acceptVisitor(Visitor visitor) {

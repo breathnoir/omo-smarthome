@@ -3,13 +3,17 @@ package smarthome.entities;
 import smarthome.HouseComponent;
 import smarthome.entities.devices.Device;
 import smarthome.entities.devices.Observer;
+import smarthome.entities.inhabitants.Inhabitant;
+import smarthome.entities.sensors.MotionSensor;
 import smarthome.entities.sensors.Sensor;
 import smarthome.iterators.HouseComponentIterator;
 import smarthome.iterators.RoomIterator;
 import smarthome.Visitor;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Room implements HouseComponent {
@@ -17,6 +21,8 @@ public class Room implements HouseComponent {
     private List<HouseComponent> devices = new ArrayList<>();
     private List<Observer> observers = new ArrayList<>();
     private List<Sensor> sensors = new ArrayList<>();
+    private Set<Inhabitant> inhabitants = new HashSet<>();
+    private MotionSensor motionSensor = null;
     private double temperature = 22.0;
     private double humidity = 50.0;
     private double windSpeed = 0;
@@ -103,14 +109,6 @@ public class Room implements HouseComponent {
         this.lightning = lightning;
     }
 
-    public boolean isMotionDetected() {
-        return motionDetected;
-    }
-
-    public void setMotionDetected(boolean motionDetected) {
-        this.motionDetected = motionDetected;
-    }
-
     public List<HouseComponent> getDevices() {
         return devices;
     }
@@ -125,5 +123,33 @@ public class Room implements HouseComponent {
 
     public List<Sensor> getSensors() {
         return sensors;
+    }
+
+    public MotionSensor getMotionSensor() {
+        return motionSensor;
+    }
+
+    public void setMotionSensor(MotionSensor motionSensor) {
+        this.motionSensor = motionSensor;
+    }
+
+    public void setMotionDetected(boolean motionDetected) {
+        this.motionDetected = motionDetected;
+    }
+
+    public boolean getMotionDetected() {
+        return motionDetected;
+    }
+
+    public int getInhabitantsCount() {
+        return inhabitants.size();
+    }
+
+    public void addInhabitants(Inhabitant inhabitant) {
+        inhabitants.add(inhabitant);
+    }
+
+    public void removeInhabitants(Inhabitant inhabitant) {
+        inhabitants.remove(inhabitant);
     }
 }

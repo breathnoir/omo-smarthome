@@ -7,29 +7,175 @@
         {
           "name": "Living Room",
           "devices": [
-            {"type": "Heater", "name": "Xiaomi heater", "electricityUsage": 5},
-            {"type": "TV", "name": "Philips tv", "electricityUsage": 5},
-            {"type": "PC", "name": "living room pc", "electricityUsage": 5},
-            {"type":  "AirConditioner", "name":  "LG AC", "electricityUsage": 7},
-            {"type":  "Blinds", "name":  "living room blinds", "electricityUsage": 1}
+            {
+              "type": "Heater",
+              "name": "Xiaomi heater",
+              "electricityUsage": 5
+            },
+            {
+              "type": "TV",
+              "name": "Philips tv",
+              "electricityUsage": 5
+            },
+            {
+              "type": "PC",
+              "name": "living room pc",
+              "electricityUsage": 5
+            },
+            {
+              "type": "AirConditioner",
+              "name": "LG AC",
+              "electricityUsage": 7
+            },
+            {
+              "type": "Blinds",
+              "name": "living room blinds",
+              "electricityUsage": 1
+            },
+            {
+              "type": "Lamp",
+              "name": "Smart Lamp",
+              "electricityUsage": 2
+            }
           ],
           "sensors": [
-            {"type": "Temperature", "name": "Temperature Sensor 1"},
-            {"type": "Wind", "name": "Wind Sensor 1"}
+            {
+              "type": "Temperature",
+              "name": "Temperature Sensor 1"
+            },
+            {
+              "type": "Wind",
+              "name": "Wind Sensor 1"
+            },
+            {
+              "type": "Light",
+              "name": "Light Sensor 1"
+            },
+            {
+              "type": "Motion",
+              "name": "Motion Sensor 1"
+            }
+          ]
+        },
+        {
+          "name": "Kitchen",
+          "devices": [
+            {
+              "type": "Humidifier",
+              "name": "Kitchen Humidifier",
+              "electricityUsage": 3
+            },
+            {
+              "type": "MicrowaveOven",
+              "name": "Panasonic Microwave",
+              "electricityUsage": 4
+            },
+            {
+              "type": "Lamp",
+              "name": "Kitchen Lamp",
+              "electricityUsage": 2
+            }
+          ],
+          "sensors": [
+            {
+              "type": "Humidity",
+              "name": "Humidity Sensor 2"
+            },
+            {
+              "type": "Light",
+              "name": "Light Sensor 2"
+            },
+            {
+              "type": "Motion",
+              "name": "Motion Sensor 2"
+            }
+          ]
+        },
+        {
+          "name": "Master Bedroom",
+          "devices": [
+            {
+              "type": "Lamp",
+              "name": "Bedside Lamp",
+              "electricityUsage": 2
+            },
+            {
+              "type": "Blinds",
+              "name": "Bedroom Blinds",
+              "electricityUsage": 1
+            },
+            {
+              "type": "Heater",
+              "name": "Bedroom Heater",
+              "electricityUsage": 4
+            }
+          ],
+          "sensors": [
+            {
+              "type": "Temperature",
+              "name": "Temperature Sensor 3"
+            },
+            {
+              "type": "Light",
+              "name": "Light Sensor 3"
+            }
+          ]
+        },
+        {
+          "name": "Bathroom",
+          "devices": [
+            {
+              "type": "Humidifier",
+              "name": "Bathroom Dehumidifier",
+              "electricityUsage": 2
+            }
+          ],
+          "sensors": [
+            {
+              "type": "Humidity",
+              "name": "Humidity Sensor 4"
+            }
           ]
         }
       ]
     }
   ],
   "inhabitants": [
-    {"type": "Adult", "name": "John", "age": 30},
-    {"type": "Adult", "name": "Lucy", "age": 30},
-    {"type": "Child", "name": "Emily", "age": 8},
-    {"type": "Animal", "name": "Buddy", "species": "Dog"},
-    {"type": "Baby", "name": "Lox", "age": 1}
+    {
+      "type": "Adult",
+      "name": "John",
+      "age": 30
+    },
+    {
+      "type": "Adult",
+      "name": "Lucy",
+      "age": 30
+    },
+    {
+      "type": "Child",
+      "name": "Emily",
+      "age": 8
+    },
+    {
+      "type": "Animal",
+      "name": "Buddy",
+      "species": "Dog"
+    },
+    {
+      "type": "Baby",
+      "name": "Lox",
+      "age": 1
+    }
   ],
   "equipment": [
-    {"name": "Bicycle 1", "type": "Bicycle"}
+    {
+      "name": "Bicycle 1",
+      "type": "Bicycle"
+    },
+    {
+      "name": "Skis 1",
+      "type": "Skis"
+    }
   ]
 }
 

@@ -1,6 +1,5 @@
 package smarthome.events;
 
-import smarthome.Simulation;
 import smarthome.entities.inhabitants.Inhabitant;
 
 import java.util.HashMap;
@@ -22,12 +21,13 @@ public class EventBus {
         handlerChains.put(eventType, chain);
     }
 
-    public void publishEvent(Event event) {
+    public boolean publishEvent(Event event) {
         Inhabitant chain = handlerChains.get(event.getClass());
         if (chain != null) {
-            chain.handleEvent(event); // pass the event to the chain
+            return chain.handleEvent(event); // pass the event to the chain
         } else {
             System.out.println("No handlers available for event type: " + event.getClass().getSimpleName());
+            return false;
         }
     }
 }

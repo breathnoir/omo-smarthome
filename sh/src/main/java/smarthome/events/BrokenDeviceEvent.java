@@ -1,5 +1,6 @@
 package smarthome.events;
 
+import smarthome.entities.Room;
 import smarthome.entities.devices.Device;
 
 public class BrokenDeviceEvent implements Event {
@@ -10,8 +11,8 @@ public class BrokenDeviceEvent implements Event {
     }
 
     @Override
-    public String getLocation() {
-        return device.getRoom().getName();
+    public Room getLocation() {
+        return device.getRoom();
     }
 
     public Device getDevice() {

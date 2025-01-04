@@ -1,5 +1,6 @@
 package smarthome.events;
 
+import smarthome.entities.Room;
 import smarthome.entities.inhabitants.Baby;
 
 public class CryingBabyEvent implements Event {
@@ -10,7 +11,7 @@ public class CryingBabyEvent implements Event {
     }
 
     @Override
-    public String getLocation() {
+    public Room getLocation() {
         return baby.getLocation();
     }
 
