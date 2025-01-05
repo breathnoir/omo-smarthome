@@ -20,9 +20,25 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 
+/**
+ * Simulation represents the core class responsible for managing and executing the simulation of a house
+ * environment. This class controls the lifecycle of a simulation, including initializing events,
+ * managing state changes, and coordinating interactions between various components like rooms, devices,
+ * and inhabitants.
+ */
 public final class Simulation {
+    /**
+     * Represents the default number of ticks per simulation cycle.
+     */
     private final int TICS = 20;
     private static House house;
+    /**
+     * Represents a queue to manage and store pending events within the simulation.
+     *
+     * Events stored in this queue are instances of objects that
+     * implement the {@link Event} interface, representing various actions or occurrences
+     * within the simulation, such as device malfunctions, inhabitant activities, or pet-related events.
+     */
     private Queue<Event> eventQueue = new LinkedList<>();
     private static Simulation instance;
     Random random = new Random();
@@ -36,6 +52,11 @@ public final class Simulation {
         return instance;
     }
 
+    /**
+     * Executes the simulation by processing events, managing inhabitants and devices,
+     * and updating room states over a series of predefined ticks. This method orchestrates
+     * the interaction among the components of the house simulation.
+     */
     public void run() {
         if (house == null) {
             System.err.println("House is null!");
@@ -118,6 +139,10 @@ public final class Simulation {
         return house.getInhabitants();
     }
 
+    /**
+     * Updates the stats of all sensors in the specified room.
+     * @param room the room whose sensors and statistics should be updated
+     */
     public void updateRoomStats(Room room) {
 
         for (Sensor sensor: room.getSensors()) sensor.updateStat();
@@ -129,6 +154,11 @@ public final class Simulation {
 
     }
 
+    /**
+     * Registers event handling chains for various event types in the system.
+     * A chain of {@link Inhabitant} objects is created using the inhabitants of the simulation.
+     * The chain is then registered with the {@link EventBus} to handle specific event types.
+     */
     public void registerChains(){
         Inhabitant chain = ChainBuilder.buildChain(getInhabitants());
         EventBus.getInstance().registerChain(BrokenDeviceEvent.class, chain);
@@ -136,6 +166,11 @@ public final class Simulation {
         EventBus.getInstance().registerChain(CryingBabyEvent.class, chain);
     }
 
+    /**
+     * Simulates the random breakdown of devices in the system. If a device breaks,
+     * a corresponding event is created, added to the event queue, and published to the EventBus.
+     * @param devices the list of devices to check for potential breakdowns
+     */
     public void generateDeviceBreakdown(List<Device> devices){
         for (Device device : devices) {
             if (random.nextDouble() < 0.03 && !device.isBroken()) {
@@ -148,6 +183,11 @@ public final class Simulation {
         }
     }
 
+    /**
+     * Generates crying events for baby inhabitants in the simulation.
+     * This event is added to the event queue
+     * and subsequently published to the EventBus for handling by other components of the system.
+     */
     public void generateCryingBabies(List<Inhabitant> inhabitants) {
         for (Inhabitant inhabitant: inhabitants) {
             if (inhabitant instanceof Baby baby) {
@@ -162,6 +202,11 @@ public final class Simulation {
         }
     }
 
+    /**
+     * Generates events for pet inhabitants in the simulation. This method
+     * randomly determines whether the animal will seek attention
+     * or perform a wandering task.
+     */
     public void generatePetEvents(List<Inhabitant> inhabitants) {
         for (Inhabitant inhabitant : inhabitants) {
             if (inhabitant instanceof Animal animal) {

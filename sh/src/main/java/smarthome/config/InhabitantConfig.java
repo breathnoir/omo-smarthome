@@ -1,5 +1,10 @@
 package smarthome.config;
 
+/**
+ * Represents the configuration for an inhabitant in a smart home system.
+ * This class stores the details about an inhabitant such as their type, name, age,
+ * and species (for non-human inhabitants like animals).
+ */
 public class InhabitantConfig {
     private String type;
     private String name;

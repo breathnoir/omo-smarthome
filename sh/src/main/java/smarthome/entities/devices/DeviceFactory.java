@@ -2,6 +2,11 @@ package smarthome.entities.devices;
 
 import smarthome.entities.Room;
 
+/**
+ * The DeviceFactory class is responsible for creating instances of different types of devices
+ * based on the specified device type. It serves as a factory for instantiating device objects
+ * belonging to specific rooms, with given attributes such as name and electricity usage.
+ */
 public class DeviceFactory {
     public  static Device createDevice(Room room, String type, String name, double electricityUsage) {
         switch (type) {

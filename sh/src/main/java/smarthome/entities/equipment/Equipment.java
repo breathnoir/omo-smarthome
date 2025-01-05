@@ -2,6 +2,10 @@ package smarthome.entities.equipment;
 
 import smarthome.entities.Room;
 
+/**
+ * Represents equipment within a smart home system.
+ * Equipment instances have a name and are optionally associated with a room.
+ */
 public class Equipment {
     private String name;
     Room room = null;

@@ -16,6 +16,13 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class Start {
+    /**
+     * The main method initializes the simulation of a smart home system by setting up
+     * a house configuration and running the simulation. It reads the configuration file,
+     * constructs a house with its components, and starts the simulation.
+     *
+     * @param args command-line arguments passed to the program. Not used in this method.
+     */
     public static void main(String[] args) {
         ObjectMapper mapper = new ObjectMapper();
 
@@ -41,6 +48,17 @@ public class Start {
         }
     }
 
+    /**
+     * Builds a complete {@link House} object using the provided configuration.
+     * This method assembles the house by constructing its components such as floors,
+     * rooms, devices, sensors, inhabitants, and equipment using the specified
+     * configuration details.
+     *
+     * @param houseConfig the configuration object that defines the structure and attributes
+     *                    of the house, including its floors, rooms, devices, sensors,
+     *                    inhabitants, and equipment.
+     * @return a fully constructed {@link House} object based on the provided configuration.
+     */
     private static House buildHouse(HouseConfig houseConfig) {
         HouseBuilder houseBuilder = new HouseBuilder(houseConfig.getName());
 

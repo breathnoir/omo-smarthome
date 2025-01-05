@@ -1,5 +1,10 @@
 package smarthome.config;
 
+/**
+ * Represents the configuration for a device within a smart home system.
+ * This class includes details about the device such as its name, type,
+ * and electricity usage.
+ */
 public class DeviceConfig {
     private String name;
     private String type;

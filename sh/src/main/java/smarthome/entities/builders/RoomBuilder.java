@@ -10,6 +10,11 @@ import smarthome.entities.sensors.SensorFactory;
 
 import java.util.stream.Collectors;
 
+/**
+ * RoomBuilder is a utility class for constructing and configuring a {@code Room} instance.
+ * It provides methods to add devices and sensors to the room and constructs the room
+ * with all configured components once the building process is complete.
+ */
 public class RoomBuilder {
     private final Room room;
 

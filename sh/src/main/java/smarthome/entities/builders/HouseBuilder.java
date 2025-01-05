@@ -5,6 +5,11 @@ import smarthome.entities.Floor;
 import smarthome.entities.House;
 import smarthome.entities.inhabitants.Inhabitant;
 
+/**
+ * A builder class for constructing and configuring a House object.
+ * This class provides a step-by-step approach to adding various components
+ * to the house, such as floors, inhabitants, and equipment.
+ */
 public class HouseBuilder {
     private House house;
 
