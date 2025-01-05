@@ -60,6 +60,12 @@ Události se v každém kroku (ticku) simulace vyhodnocují a zpracovávají, ab
 |Command|Každé zadání je zpracováno jako příkaz s konkrétními daty| task|
 |Chain of Responsibility|Vytváří řetězec obyvatel, kteří postupně zkoumají událost a mohou na ni reagovat, pokud jsou toho schopni.|config/ChainBuilder|
 
+### Použití funkcionálního programování a Stream API
+
+- **RoomBuilder** `build()`
+- **Simulation** `getUsableObjects()`, `getDevices()`, `getRooms()`
+
+
 ### Postup spuštění aplikace
 
 1. Naklonujte si tento repozitář do svého prostředí.
