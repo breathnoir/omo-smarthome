@@ -1,0 +1,49 @@
+Consumption Report for House House 5
+---------------------------------------
+  Floor: Basement
+      Room: Laundry Room
+          Device: Laundry Heater - Usage: 12.0 kWh
+          Device: Laundry Humidifier - Usage: 42.0 kWh
+          Device: Laundry Lamp - Usage: 0.0 kWh
+      Room: Storage Room
+          Device: Storage PC - Usage: 70.0 kWh
+  Floor: Ground Floor
+      Room: Living Room
+          Device: Living Heater - Usage: 20.0 kWh
+          Device: Living TV - Usage: 50.0 kWh
+          Device: Living Lamp - Usage: 28.0 kWh
+          Device: Living Blinds - Usage: 0.0 kWh
+      Room: Kitchen
+          Device: Kitchen Microwave - Usage: 56.0 kWh
+          Device: Kitchen Humidifier - Usage: 27.0 kWh
+          Device: Kitchen Lamp - Usage: 0.0 kWh
+          Device: Kitchen Blinds - Usage: 0.0 kWh
+      Room: Guest Bathroom
+          Device: Guest Bath Dehumidifier - Usage: 14.0 kWh
+          Device: Guest Bath Lamp - Usage: 0.0 kWh
+  Floor: First Floor
+      Room: Master Bedroom
+          Device: Master AC - Usage: 84.0 kWh
+          Device: Master Lamp - Usage: 14.0 kWh
+          Device: Master Blinds - Usage: 0.0 kWh
+      Room: Kids Room
+          Device: Kids Heater - Usage: 24.0 kWh
+          Device: Kids TV - Usage: 70.0 kWh
+          Device: Kids Lamp - Usage: 16.0 kWh
+          Device: Kids Humidifier - Usage: 0.0 kWh
+      Room: Home Office
+          Device: Office PC - Usage: 35.0 kWh
+          Device: Office Heater - Usage: 16.0 kWh
+          Device: Office Lamp - Usage: 24.0 kWh
+  Floor: Second Floor
+      Room: Guest Bedroom
+          Device: Guest Heater - Usage: 20.0 kWh
+          Device: Guest Lamp - Usage: 0.0 kWh
+      Room: Gym
+          Device: Gym AC - Usage: 49.0 kWh
+          Device: Gym Lamp - Usage: 30.0 kWh
+          Device: Gym PC - Usage: 50.0 kWh
+      Room: Balcony
+          Device: Balcony Blinds - Usage: 9.0 kWh
+---------------------------------------
+Total Usage: 760.0 kWh

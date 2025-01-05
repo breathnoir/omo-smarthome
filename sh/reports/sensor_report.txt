@@ -1,0 +1,533 @@
+Tick 0:
+                              
+John moved to Storage Room
+Lucy moved to Living Room
+Adam moved to Kitchen
+Karen moved to Kids Room
+Michael moved to Home Office
+Emily moved to Gym
+Whiskers moved to Home Office
+Apollo moved to Home Office
+   >Laundry Room Stats Updated: Temperature = 22.1, Humidity = 53.6, WindSpeed = 0.0, Lightning = 700.0
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 448.1
+   >Living Room Stats Updated: Temperature = 27.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 551.3
+Device Living Lamp in Living Room is on
+   >Kitchen Stats Updated: Temperature = 32.0, Humidity = 53.9, WindSpeed = 0.0, Lightning = 440.4
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 21.1, WindSpeed = 0.0, Lightning = 700.0
+Device Guest Bath Dehumidifier in Guest Bathroom is on
+   >Master Bedroom Stats Updated: Temperature = 31.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 488.7
+Device Master AC in Master Bedroom is on
+   >Kids Room Stats Updated: Temperature = 19.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 445.6
+Device Kids Heater in Kids Room is on
+Device Kids Lamp in Kids Room is on
+   >Home Office Stats Updated: Temperature = 31.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 414.7
+Device Office Lamp in Home Office is on
+   >Guest Bedroom Stats Updated: Temperature = 21.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 613.2
+   >Gym Stats Updated: Temperature = 24.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 573.2
+Device Gym Lamp in Gym is on
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 44.2, Lightning = 628.9
+Device Balcony Blinds in Balcony is on
+-----------------------------------
+Tick 1:
+                              
+Device Master Blinds in Master Bedroom is broken
+Buddy moved to Guest Bathroom
+Whiskers moved to Storage Room
+Polly moved to Laundry Room
+   >Laundry Room Stats Updated: Temperature = 32.7, Humidity = 41.1, WindSpeed = 0.0, Lightning = 700.0
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 455.3
+   >Living Room Stats Updated: Temperature = 28.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 623.8
+   >Kitchen Stats Updated: Temperature = 26.7, Humidity = 26.1, WindSpeed = 0.0, Lightning = 554.8
+Device Kitchen Humidifier in Kitchen is on
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 48.7, WindSpeed = 0.0, Lightning = 700.0
+Device Guest Bath Dehumidifier in Guest Bathroom is off
+   >Master Bedroom Stats Updated: Temperature = 23.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 734.0
+Device Master AC in Master Bedroom is off
+   >Kids Room Stats Updated: Temperature = 23.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 432.1
+Device Kids Heater in Kids Room is off
+   >Home Office Stats Updated: Temperature = 23.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 461.2
+   >Guest Bedroom Stats Updated: Temperature = 20.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 681.6
+   >Gym Stats Updated: Temperature = 21.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 455.3
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 13.6, Lightning = 581.1
+Device Balcony Blinds in Balcony is off
+-----------------------------------
+Tick 2:
+                              
+Device Guest Bath Dehumidifier in Guest Bathroom is broken
+Whiskers moved to Living Room
+Polly moved to Kitchen
+Apollo moved to Guest Bedroom
+   >Laundry Room Stats Updated: Temperature = 28.1, Humidity = 65.3, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Humidifier in Laundry Room is on
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 718.6
+   >Living Room Stats Updated: Temperature = 23.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 661.8
+Device Living Lamp in Living Room is off
+   >Kitchen Stats Updated: Temperature = 28.1, Humidity = 67.6, WindSpeed = 0.0, Lightning = 577.6
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 48.0, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 29.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 472.9
+Device Master AC in Master Bedroom is on
+   >Kids Room Stats Updated: Temperature = 18.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 472.9
+Device Kids Heater in Kids Room is on
+   >Home Office Stats Updated: Temperature = 34.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 668.7
+Device Office Lamp in Home Office is off
+   >Guest Bedroom Stats Updated: Temperature = 23.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 551.3
+   >Gym Stats Updated: Temperature = 26.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 501.3
+Device Gym AC in Gym is on
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 24.5, Lightning = 647.4
+-----------------------------------
+Tick 3:
+                              
+John moved to Master Bedroom
+Lucy moved to Guest Bathroom
+Adam moved to Storage Room
+Karen moved to Living Room
+Michael moved to Kitchen
+Emily moved to Kids Room
+Brian moved to Home Office
+Sophie moved to Gym
+Buddy moved to Living Room
+Whiskers moved to Laundry Room
+Polly moved to Gym
+Apollo moved to Guest Bathroom
+   >Laundry Room Stats Updated: Temperature = 29.6, Humidity = 60.4, WindSpeed = 0.0, Lightning = 700.0
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 415.3
+   >Living Room Stats Updated: Temperature = 18.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 691.4
+Device Living Heater in Living Room is on
+   >Kitchen Stats Updated: Temperature = 18.0, Humidity = 45.2, WindSpeed = 0.0, Lightning = 697.0
+Device Kitchen Humidifier in Kitchen is off
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 66.3, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 28.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 562.5
+Device Master Lamp in Master Bedroom is on
+   >Kids Room Stats Updated: Temperature = 21.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 501.5
+Device Kids Heater in Kids Room is off
+   >Home Office Stats Updated: Temperature = 34.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 750.3
+   >Guest Bedroom Stats Updated: Temperature = 24.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 752.6
+   >Gym Stats Updated: Temperature = 23.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 596.2
+Device Gym AC in Gym is off
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 18.7, Lightning = 446.9
+-----------------------------------
+Tick 4:
+                              
+Buddy moved to Laundry Room
+Whiskers moved to Kitchen
+Polly moved to Laundry Room
+Apollo moved to Kids Room
+   >Laundry Room Stats Updated: Temperature = 24.3, Humidity = 30.4, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Humidifier in Laundry Room is off
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 597.5
+   >Living Room Stats Updated: Temperature = 33.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 630.3
+Device Living Heater in Living Room is off
+Device Living Lamp in Living Room is on
+   >Kitchen Stats Updated: Temperature = 26.8, Humidity = 50.6, WindSpeed = 0.0, Lightning = 731.4
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 41.5, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 34.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 608.8
+   >Kids Room Stats Updated: Temperature = 18.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 613.2
+Device Kids Heater in Kids Room is on
+   >Home Office Stats Updated: Temperature = 15.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 656.0
+Device Office Heater in Home Office is on
+   >Guest Bedroom Stats Updated: Temperature = 21.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 499.3
+   >Gym Stats Updated: Temperature = 34.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 464.7
+Device Gym AC in Gym is on
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 21.0, Lightning = 672.9
+-----------------------------------
+Tick 5:
+                              
+Device Kids Lamp in Kids Room is broken
+Buddy moved to Laundry Room
+Polly moved to Living Room
+Apollo moved to Laundry Room
+   >Laundry Room Stats Updated: Temperature = 30.8, Humidity = 68.9, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Humidifier in Laundry Room is on
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 461.4
+   >Living Room Stats Updated: Temperature = 23.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 732.0
+Device Living Lamp in Living Room is off
+   >Kitchen Stats Updated: Temperature = 25.3, Humidity = 61.1, WindSpeed = 0.0, Lightning = 646.8
+Device Kitchen Humidifier in Kitchen is on
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 26.2, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 33.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 473.3
+   >Kids Room Stats Updated: Temperature = 29.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 573.4
+Device Kids Heater in Kids Room is off
+   >Home Office Stats Updated: Temperature = 17.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 646.1
+Device Office Lamp in Home Office is on
+   >Guest Bedroom Stats Updated: Temperature = 29.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 535.1
+   >Gym Stats Updated: Temperature = 26.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 660.9
+Device Gym Lamp in Gym is off
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 47.1, Lightning = 661.7
+Device Balcony Blinds in Balcony is on
+-----------------------------------
+Tick 6:
+                              
+Adam moved to Kitchen
+Karen moved to Kids Room
+Michael moved to Laundry Room
+Emily moved to Storage Room
+Brian moved to Living Room
+Sophie moved to Kitchen
+David moved to Kids Room
+Buddy moved to Home Office
+Polly moved to Guest Bedroom
+   >Laundry Room Stats Updated: Temperature = 28.2, Humidity = 61.1, WindSpeed = 0.0, Lightning = 700.0
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 618.8
+   >Living Room Stats Updated: Temperature = 34.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 453.7
+Device Living Lamp in Living Room is on
+   >Kitchen Stats Updated: Temperature = 31.6, Humidity = 52.3, WindSpeed = 0.0, Lightning = 432.6
+Device Kitchen Humidifier in Kitchen is off
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 54.0, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 33.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 730.7
+Device Master Lamp in Master Bedroom is off
+   >Kids Room Stats Updated: Temperature = 34.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 528.6
+   >Home Office Stats Updated: Temperature = 24.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 599.4
+Device Office Heater in Home Office is off
+   >Guest Bedroom Stats Updated: Temperature = 25.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 562.7
+   >Gym Stats Updated: Temperature = 20.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 432.1
+Device Gym AC in Gym is off
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 27.4, Lightning = 735.1
+Device Balcony Blinds in Balcony is off
+-----------------------------------
+Tick 7:
+                              
+John moved to Kitchen
+Device Office Heater in Home Office is broken
+Lucy moved to Home Office
+Adam moved to Home Office
+Michael moved to Gym
+Buddy moved to Gym
+Polly moved to Laundry Room
+Apollo moved to Storage Room
+   >Laundry Room Stats Updated: Temperature = 31.5, Humidity = 55.2, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Humidifier in Laundry Room is off
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 740.1
+   >Living Room Stats Updated: Temperature = 29.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 412.6
+   >Kitchen Stats Updated: Temperature = 21.5, Humidity = 63.8, WindSpeed = 0.0, Lightning = 661.2
+Device Kitchen Humidifier in Kitchen is on
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 62.5, WindSpeed = 0.0, Lightning = 700.0
+Device Guest Bath Dehumidifier in Guest Bathroom is on
+   >Master Bedroom Stats Updated: Temperature = 30.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 400.8
+   >Kids Room Stats Updated: Temperature = 24.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 692.9
+   >Home Office Stats Updated: Temperature = 22.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 443.5
+   >Guest Bedroom Stats Updated: Temperature = 16.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 486.3
+Device Guest Heater in Guest Bedroom is on
+   >Gym Stats Updated: Temperature = 31.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 607.7
+Device Gym AC in Gym is on
+Device Gym Lamp in Gym is on
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 41.0, Lightning = 656.9
+Device Balcony Blinds in Balcony is on
+-----------------------------------
+Tick 8:
+                              
+Buddy moved to Living Room
+Whiskers moved to Master Bedroom
+Polly moved to Kitchen
+   >Laundry Room Stats Updated: Temperature = 26.2, Humidity = 60.4, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Humidifier in Laundry Room is on
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 403.3
+   >Living Room Stats Updated: Temperature = 15.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 518.5
+Device Living Heater in Living Room is on
+   >Kitchen Stats Updated: Temperature = 18.9, Humidity = 46.5, WindSpeed = 0.0, Lightning = 651.2
+Device Kitchen Humidifier in Kitchen is off
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 75.4, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 15.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 749.7
+Device Master AC in Master Bedroom is off
+   >Kids Room Stats Updated: Temperature = 23.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 655.9
+   >Home Office Stats Updated: Temperature = 22.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 655.0
+Device Office Lamp in Home Office is off
+   >Guest Bedroom Stats Updated: Temperature = 25.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 631.6
+Device Guest Heater in Guest Bedroom is off
+   >Gym Stats Updated: Temperature = 18.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 677.7
+Device Gym AC in Gym is off
+Device Gym Lamp in Gym is off
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 2.1, Lightning = 479.5
+Device Balcony Blinds in Balcony is off
+-----------------------------------
+Tick 9:
+                              
+Device Kids Humidifier in Kids Room is broken
+Emily moved to Storage Room
+Brian moved to Living Room
+Sophie moved to Kitchen
+David moved to Kids Room
+Buddy moved to Living Room
+Whiskers moved to Home Office
+   >Laundry Room Stats Updated: Temperature = 30.2, Humidity = 28.0, WindSpeed = 0.0, Lightning = 700.0
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 626.4
+   >Living Room Stats Updated: Temperature = 21.9, Humidity = 50.0, WindSpeed = 0.0, Lightning = 743.2
+Device Living Heater in Living Room is off
+Device Living Lamp in Living Room is off
+   >Kitchen Stats Updated: Temperature = 34.3, Humidity = 66.4, WindSpeed = 0.0, Lightning = 432.2
+Device Kitchen Humidifier in Kitchen is on
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 72.6, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 33.9, Humidity = 50.0, WindSpeed = 0.0, Lightning = 787.2
+Device Master AC in Master Bedroom is on
+   >Kids Room Stats Updated: Temperature = 23.3, Humidity = 50.0, WindSpeed = 0.0, Lightning = 684.8
+   >Home Office Stats Updated: Temperature = 27.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 671.6
+   >Guest Bedroom Stats Updated: Temperature = 25.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 736.6
+   >Gym Stats Updated: Temperature = 19.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 468.3
+Device Gym Lamp in Gym is on
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 6.5, Lightning = 501.6
+-----------------------------------
+Tick 10:
+                              
+Karen moved to Kids Room
+Michael moved to Storage Room
+Buddy moved to Kitchen
+Whiskers moved to Gym
+   >Laundry Room Stats Updated: Temperature = 22.3, Humidity = 75.2, WindSpeed = 0.0, Lightning = 700.0
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 561.2
+   >Living Room Stats Updated: Temperature = 24.9, Humidity = 50.0, WindSpeed = 0.0, Lightning = 652.9
+   >Kitchen Stats Updated: Temperature = 21.2, Humidity = 63.0, WindSpeed = 0.0, Lightning = 671.1
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 56.9, WindSpeed = 0.0, Lightning = 700.0
+Device Guest Bath Dehumidifier in Guest Bathroom is off
+   >Master Bedroom Stats Updated: Temperature = 32.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 690.9
+   >Kids Room Stats Updated: Temperature = 19.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 572.9
+Device Kids Heater in Kids Room is on
+Device Kids Lamp in Kids Room is on
+   >Home Office Stats Updated: Temperature = 20.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 577.0
+Device Office Lamp in Home Office is on
+   >Guest Bedroom Stats Updated: Temperature = 15.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 512.1
+Device Guest Heater in Guest Bedroom is on
+   >Gym Stats Updated: Temperature = 16.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 711.0
+Device Gym Lamp in Gym is off
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 48.0, Lightning = 611.2
+Device Balcony Blinds in Balcony is on
+-----------------------------------
+Tick 11:
+                              
+Device Master AC in Master Bedroom is broken
+John moved to Master Bedroom
+Lucy moved to Home Office
+Michael moved to Gym
+Buddy moved to Kitchen
+Polly moved to Guest Bedroom
+Apollo moved to Balcony
+   >Laundry Room Stats Updated: Temperature = 31.2, Humidity = 45.1, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Humidifier in Laundry Room is off
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 545.9
+   >Living Room Stats Updated: Temperature = 15.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 448.7
+Device Living Heater in Living Room is on
+Device Living Lamp in Living Room is on
+   >Kitchen Stats Updated: Temperature = 29.9, Humidity = 55.4, WindSpeed = 0.0, Lightning = 442.0
+Device Kitchen Humidifier in Kitchen is off
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 59.3, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 23.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 437.5
+Device Master Lamp in Master Bedroom is on
+   >Kids Room Stats Updated: Temperature = 26.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 771.3
+Device Kids Heater in Kids Room is off
+Device Kids Lamp in Kids Room is off
+   >Home Office Stats Updated: Temperature = 20.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 454.9
+   >Guest Bedroom Stats Updated: Temperature = 19.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 506.5
+   >Gym Stats Updated: Temperature = 34.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 575.6
+Device Gym AC in Gym is on
+Device Gym Lamp in Gym is on
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 25.1, Lightning = 654.3
+Device Balcony Blinds in Balcony is off
+-----------------------------------
+Tick 12:
+                              
+Emily moved to Gym
+Brian moved to Storage Room
+Sophie moved to Kitchen
+David moved to Kids Room
+Buddy moved to Gym
+Polly moved to Kids Room
+Apollo moved to Master Bedroom
+   >Laundry Room Stats Updated: Temperature = 28.8, Humidity = 76.1, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Humidifier in Laundry Room is on
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 526.9
+   >Living Room Stats Updated: Temperature = 28.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 618.2
+Device Living Heater in Living Room is off
+   >Kitchen Stats Updated: Temperature = 27.5, Humidity = 68.8, WindSpeed = 0.0, Lightning = 524.9
+Device Kitchen Humidifier in Kitchen is on
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 30.2, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 24.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 431.9
+   >Kids Room Stats Updated: Temperature = 26.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 442.6
+Device Kids Lamp in Kids Room is on
+   >Home Office Stats Updated: Temperature = 21.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 404.0
+   >Guest Bedroom Stats Updated: Temperature = 23.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 695.4
+Device Guest Heater in Guest Bedroom is off
+   >Gym Stats Updated: Temperature = 24.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 442.7
+Device Gym AC in Gym is off
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 7.6, Lightning = 509.2
+-----------------------------------
+Tick 13:
+                              
+Lucy moved to Living Room
+Device Living Heater in Living Room is broken
+Buddy moved to Home Office
+Polly moved to Home Office
+Apollo moved to Guest Bedroom
+   >Laundry Room Stats Updated: Temperature = 33.5, Humidity = 24.0, WindSpeed = 0.0, Lightning = 700.0
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 667.3
+   >Living Room Stats Updated: Temperature = 31.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 437.4
+   >Kitchen Stats Updated: Temperature = 22.5, Humidity = 31.7, WindSpeed = 0.0, Lightning = 629.4
+Device Kitchen Humidifier in Kitchen is off
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 75.1, WindSpeed = 0.0, Lightning = 700.0
+Device Guest Bath Dehumidifier in Guest Bathroom is on
+   >Master Bedroom Stats Updated: Temperature = 34.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 754.9
+Device Master Lamp in Master Bedroom is off
+   >Kids Room Stats Updated: Temperature = 23.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 667.3
+Device Kids Lamp in Kids Room is off
+   >Home Office Stats Updated: Temperature = 31.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 471.5
+   >Guest Bedroom Stats Updated: Temperature = 20.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 636.8
+   >Gym Stats Updated: Temperature = 20.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 755.8
+Device Gym Lamp in Gym is off
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 36.8, Lightning = 444.9
+Device Balcony Blinds in Balcony is on
+-----------------------------------
+Tick 14:
+                              
+Adam moved to Home Office
+Karen moved to Living Room
+Michael moved to Gym
+Emily moved to Gym
+Buddy moved to Living Room
+Apollo moved to Guest Bedroom
+   >Laundry Room Stats Updated: Temperature = 19.9, Humidity = 27.8, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Heater in Laundry Room is on
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 779.0
+   >Living Room Stats Updated: Temperature = 29.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 492.4
+   >Kitchen Stats Updated: Temperature = 22.7, Humidity = 26.5, WindSpeed = 0.0, Lightning = 598.9
+Device Kitchen Humidifier in Kitchen is on
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 45.5, WindSpeed = 0.0, Lightning = 700.0
+Device Guest Bath Dehumidifier in Guest Bathroom is off
+   >Master Bedroom Stats Updated: Temperature = 33.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 437.0
+Device Master AC in Master Bedroom is on
+Device Master Lamp in Master Bedroom is on
+   >Kids Room Stats Updated: Temperature = 15.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 474.5
+Device Kids Heater in Kids Room is on
+Device Kids Lamp in Kids Room is on
+   >Home Office Stats Updated: Temperature = 26.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 659.1
+Device Office Lamp in Home Office is off
+   >Guest Bedroom Stats Updated: Temperature = 16.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 543.5
+Device Guest Heater in Guest Bedroom is on
+   >Gym Stats Updated: Temperature = 25.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 541.5
+Device Gym AC in Gym is on
+Device Gym Lamp in Gym is on
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 38.7, Lightning = 710.3
+-----------------------------------
+Tick 15:
+                              
+John moved to Storage Room
+Michael moved to Kitchen
+Brian moved to Kids Room
+Whiskers moved to Laundry Room
+Polly moved to Master Bedroom
+Apollo moved to Guest Bathroom
+   >Laundry Room Stats Updated: Temperature = 15.9, Humidity = 27.4, WindSpeed = 0.0, Lightning = 700.0
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 762.8
+   >Living Room Stats Updated: Temperature = 30.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 776.9
+Device Living Lamp in Living Room is off
+   >Kitchen Stats Updated: Temperature = 19.6, Humidity = 34.0, WindSpeed = 0.0, Lightning = 536.2
+Device Kitchen Humidifier in Kitchen is off
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 35.4, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 23.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 568.5
+Device Master AC in Master Bedroom is off
+   >Kids Room Stats Updated: Temperature = 16.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 654.1
+Device Kids Lamp in Kids Room is off
+   >Home Office Stats Updated: Temperature = 27.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 774.6
+   >Guest Bedroom Stats Updated: Temperature = 19.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 449.3
+   >Gym Stats Updated: Temperature = 20.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 501.6
+Device Gym AC in Gym is off
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 12.7, Lightning = 401.6
+Device Balcony Blinds in Balcony is off
+-----------------------------------
+Tick 16:
+                              
+Device Kids Lamp in Kids Room is broken
+Device Guest Lamp in Guest Bedroom is broken
+Buddy moved to Kids Room
+Whiskers moved to Guest Bathroom
+Apollo moved to Home Office
+   >Laundry Room Stats Updated: Temperature = 33.6, Humidity = 70.2, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Heater in Laundry Room is off
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 695.9
+   >Living Room Stats Updated: Temperature = 22.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 448.5
+Device Living Lamp in Living Room is on
+   >Kitchen Stats Updated: Temperature = 16.9, Humidity = 32.8, WindSpeed = 0.0, Lightning = 604.3
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 46.1, WindSpeed = 0.0, Lightning = 700.0
+   >Master Bedroom Stats Updated: Temperature = 20.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 672.8
+Device Master Lamp in Master Bedroom is off
+   >Kids Room Stats Updated: Temperature = 26.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 540.4
+Device Kids Heater in Kids Room is off
+   >Home Office Stats Updated: Temperature = 20.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 506.4
+Device Office Lamp in Home Office is on
+   >Guest Bedroom Stats Updated: Temperature = 34.9, Humidity = 50.0, WindSpeed = 0.0, Lightning = 657.8
+Device Guest Heater in Guest Bedroom is off
+   >Gym Stats Updated: Temperature = 15.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 432.3
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 34.2, Lightning = 728.7
+Device Balcony Blinds in Balcony is on
+-----------------------------------
+Tick 17:
+                              
+Lucy moved to Kids Room
+Emily moved to Living Room
+Whiskers moved to Guest Bathroom
+Polly moved to Kids Room
+Apollo moved to Home Office
+   >Laundry Room Stats Updated: Temperature = 34.4, Humidity = 52.2, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Humidifier in Laundry Room is off
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 540.1
+   >Living Room Stats Updated: Temperature = 33.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 540.4
+   >Kitchen Stats Updated: Temperature = 28.1, Humidity = 43.3, WindSpeed = 0.0, Lightning = 746.8
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 20.5, WindSpeed = 0.0, Lightning = 700.0
+Device Guest Bath Dehumidifier in Guest Bathroom is on
+   >Master Bedroom Stats Updated: Temperature = 31.4, Humidity = 50.0, WindSpeed = 0.0, Lightning = 642.9
+Device Master AC in Master Bedroom is on
+   >Kids Room Stats Updated: Temperature = 33.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 445.7
+   >Home Office Stats Updated: Temperature = 24.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 428.9
+   >Guest Bedroom Stats Updated: Temperature = 23.7, Humidity = 50.0, WindSpeed = 0.0, Lightning = 411.5
+   >Gym Stats Updated: Temperature = 18.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 589.2
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 9.0, Lightning = 414.9
+Device Balcony Blinds in Balcony is off
+-----------------------------------
+Tick 18:
+                              
+John moved to Guest Bedroom
+Karen moved to Kids Room
+Michael moved to Home Office
+Brian moved to Storage Room
+Sophie moved to Kitchen
+David moved to Kids Room
+   >Laundry Room Stats Updated: Temperature = 29.0, Humidity = 22.0, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Humidifier in Laundry Room is on
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 533.4
+   >Living Room Stats Updated: Temperature = 22.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 492.3
+   >Kitchen Stats Updated: Temperature = 22.8, Humidity = 54.5, WindSpeed = 0.0, Lightning = 621.0
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 30.9, WindSpeed = 0.0, Lightning = 700.0
+Device Guest Bath Dehumidifier in Guest Bathroom is off
+   >Master Bedroom Stats Updated: Temperature = 24.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 417.4
+Device Master AC in Master Bedroom is off
+   >Kids Room Stats Updated: Temperature = 20.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 401.4
+   >Home Office Stats Updated: Temperature = 16.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 592.1
+Device Office Heater in Home Office is on
+   >Guest Bedroom Stats Updated: Temperature = 33.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 431.6
+   >Gym Stats Updated: Temperature = 31.9, Humidity = 50.0, WindSpeed = 0.0, Lightning = 478.7
+Device Gym AC in Gym is on
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 41.0, Lightning = 419.3
+Device Balcony Blinds in Balcony is on
+-----------------------------------
+Tick 19:
+                              
+Karen moved to Home Office
+Device Kitchen Blinds in Kitchen is broken
+Michael moved to Kitchen
+Device Master Lamp in Master Bedroom is broken
+Whiskers moved to Balcony
+   >Laundry Room Stats Updated: Temperature = 15.5, Humidity = 26.9, WindSpeed = 0.0, Lightning = 700.0
+Device Laundry Heater in Laundry Room is on
+   >Storage Room Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 0.0, Lightning = 546.7
+   >Living Room Stats Updated: Temperature = 18.5, Humidity = 50.0, WindSpeed = 0.0, Lightning = 409.3
+Device Living Heater in Living Room is on
+   >Kitchen Stats Updated: Temperature = 25.5, Humidity = 78.4, WindSpeed = 0.0, Lightning = 416.8
+Device Kitchen Humidifier in Kitchen is on
+   >Guest Bathroom Stats Updated: Temperature = 22.0, Humidity = 20.3, WindSpeed = 0.0, Lightning = 700.0
+Device Guest Bath Dehumidifier in Guest Bathroom is on
+   >Master Bedroom Stats Updated: Temperature = 28.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 519.3
+Device Master AC in Master Bedroom is on
+   >Kids Room Stats Updated: Temperature = 20.6, Humidity = 50.0, WindSpeed = 0.0, Lightning = 651.2
+   >Home Office Stats Updated: Temperature = 15.2, Humidity = 50.0, WindSpeed = 0.0, Lightning = 689.8
+Device Office Lamp in Home Office is off
+   >Guest Bedroom Stats Updated: Temperature = 22.8, Humidity = 50.0, WindSpeed = 0.0, Lightning = 503.4
+   >Gym Stats Updated: Temperature = 21.1, Humidity = 50.0, WindSpeed = 0.0, Lightning = 582.0
+Device Gym AC in Gym is off
+   >Balcony Stats Updated: Temperature = 22.0, Humidity = 50.0, WindSpeed = 30.8, Lightning = 480.2
+-----------------------------------

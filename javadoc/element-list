@@ -1,0 +1,13 @@
+smarthome
+smarthome.config
+smarthome.entities
+smarthome.entities.builders
+smarthome.entities.devices
+smarthome.entities.devices.state
+smarthome.entities.equipment
+smarthome.entities.inhabitants
+smarthome.entities.sensors
+smarthome.events
+smarthome.iterators
+smarthome.reports
+smarthome.task

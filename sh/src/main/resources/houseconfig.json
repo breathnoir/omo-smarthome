@@ -1,0 +1,105 @@
+{
+  "name": "Smaller House",
+  "floors": [
+    {
+      "name": "Ground Floor",
+      "rooms": [
+        {
+          "name": "Living Room",
+          "devices": [
+            {"type":"Heater","name":"Living Heater","electricityUsage":5},
+            {"type":"TV","name":"Living TV","electricityUsage":5},
+            {"type":"PC","name":"Living PC","electricityUsage":5},
+            {"type":"Blinds","name":"Living Blinds","electricityUsage":1}
+          ],
+          "sensors": [
+            {"type":"Temperature","name":"LivingRoom Temp"},
+            {"type":"Light","name":"LivingRoom Light"},
+            {"type":"Motion","name":"LivingRoom Motion"}
+          ]
+        },
+        {
+          "name": "Kitchen",
+          "devices": [
+            {"type":"AirConditioner","name":"Kitchen AC","electricityUsage":7},
+            {"type":"Humidifier","name":"Kitchen Humidifier","electricityUsage":3},
+            {"type":"MicrowaveOven","name":"Kitchen Microwave","electricityUsage":4}
+          ],
+          "sensors": [
+            {"type":"Temperature","name":"Kitchen Temp"},
+            {"type":"Humidity","name":"Kitchen Humidity"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "First Floor",
+      "rooms": [
+        {
+          "name": "Master Bedroom",
+          "devices": [
+            {"type":"Heater","name":"Master Heater","electricityUsage":4},
+            {"type":"Lamp","name":"Bedside Lamp","electricityUsage":2},
+            {"type":"Blinds","name":"Bedroom Blinds","electricityUsage":1}
+          ],
+          "sensors": [
+            {"type":"Temperature","name":"Master Temp"},
+            {"type":"Light","name":"Master Light"}
+          ]
+        },
+        {
+          "name": "Bathroom",
+          "devices": [
+            {"type":"Humidifier","name":"Bathroom Dehumidifier","electricityUsage":2},
+            {"type":"Lamp","name":"Bathroom Lamp","electricityUsage":2}
+          ],
+          "sensors": [
+            {"type":"Humidity","name":"Bathroom Humidity"}
+          ]
+        },
+        {
+          "name": "Garage",
+          "devices": [
+            {"type":"PC","name":"Garage PC","electricityUsage":5},
+            {"type":"AirConditioner","name":"Garage AC","electricityUsage":7},
+            {"type":"Lamp","name":"Garage Lamp","electricityUsage":2},
+            {"type":"MicrowaveOven","name":"Garage Microwave","electricityUsage":4}
+          ],
+          "sensors": [
+            {"type":"Temperature","name":"Garage Temp"},
+            {"type":"Wind","name":"Garage Wind"}
+          ]
+        },
+        {
+          "name": "Kids Room",
+          "devices": [
+            {"type":"TV","name":"Kids TV","electricityUsage":5},
+            {"type":"Heater","name":"Kids Heater","electricityUsage":4},
+            {"type":"Lamp","name":"Kids Lamp","electricityUsage":2},
+            {"type":"Humidifier","name":"Kids Humidifier","electricityUsage":3}
+          ],
+          "sensors": [
+            {"type":"Light","name":"Kids Light"},
+            {"type":"Motion","name":"Kids Motion"}
+          ]
+        }
+      ]
+    }
+  ],
+  "inhabitants": [
+    {"type":"Adult","name":"John","age":30},
+    {"type":"Adult","name":"Lucy","age":30},
+    {"type":"Adult","name":"Adam","age":33},
+    {"type":"Adult","name":"Karen","age":42},
+    {"type":"Child","name":"Emily","age":9},
+    {"type":"Baby","name":"Pam","age":1},
+    {"type":"Animal","name":"Buddy","species":"Dog"},
+    {"type":"Animal","name":"Garfield","species":"Cat"},
+    {"type":"Animal","name":"Rex","species":"Dog"}
+  ],
+  "equipment": [
+    {"name":"Bicycle 1","type":"Bicycle"},
+    {"name":"Bicycle 2","type":"Bicycle"},
+    {"name":"Skis 1","type":"Skis"}
+  ]
+}
