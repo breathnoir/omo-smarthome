@@ -1,4 +1,5 @@
 # OMO SmartHome
+Semestrální projekt FEL ČVUT
 
 ## Popis Aplikace
 
